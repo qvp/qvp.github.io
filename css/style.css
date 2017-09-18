@@ -13,17 +13,12 @@ h1 a:hover {
 }
 
 #loading {
-    display: none;
     position: relative;
     background: #fff;
     height: 100%;
     width: 100%;
     overflow: hidden;
     z-index: 99999;
-}
-
-.loading #loading {
-    display: block;
 }
 
 #loading img {
