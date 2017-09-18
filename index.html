@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Александр Кузьменко | Full Stack Веб-разработчик</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="js/fullpage/jquery.fullpage.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="loading">
+        <img src="loader.gif">
+    </div>
+    <div id="header" style="display: none;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand text-uppercase" href="#home">Alexander <span>Kuzmenko</span></a>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link font-weight-100" href="#home">Главная</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link font-weight-100" href="#portfolio">Портфолио</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-100" href="#about">Обо мне</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-100" href="https://gitlab.com/qvp/code-samples" target="_blank">Примеры кода</a>
+                        </li>
+                    </ul>
+                    <a href="https://github.com/qvp" target="_blank" class="head-icon"><i class="devicon-github-plain"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="fullpage" style="display: none;">
+        <div class="section" id="homepage" data-anchor="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <h2 class="text-center text-white font-weight-100">Александр Кузьменко</h2>
+                            <h1 class="text-center text-white font-weight-100">
+                                <span id="typed"></span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 ml-auto mr-auto">
+                        <h6 class="text-center margin-top-50 text-white font-weight-100">Перейти в портфолио по тегу:</h6>
+                        <a href="#portfolio">
+                            <span class="badge badge-danger badge-skill">PHP</span>
+                        </a>
+                        <a href="#portfolio/1">
+                            <span class="badge badge-danger badge-skill">Laravel</span>
+                        </a>
+                        <a href="#portfolio">
+                            <span class="badge badge-danger badge-skill">Yii</span>
+                        </a>
+                        <a href="#portfolio">
+                            <span class="badge badge-danger badge-skill">Lumen</span>
+                        </a>
+                        <a href="#portfolio">
+                            <span class="badge badge-danger badge-skill">Regex</span>
+                        </a>
+                        <a href="#portfolio">
+                            <span class="badge badge-danger badge-skill">REST API</span>
+                        </a>
+                        <a href="#portfolio/2">
+                            <span class="badge badge-danger badge-skill">SQL</span>
+                        </a>
+                        <a href="#portfolio/2">
+                            <span class="badge badge-danger badge-skill">MySql</span>
+                        </a>
+                        <a href="#portfolio/7">
+                            <span class="badge badge-danger badge-skill">PostgreSQL</span>
+                        </a>
+                        <a href="#portfolio">
+                            <span class="badge badge-danger badge-skill">MongoDB</span>
+                        </a>
+                        <a href="#portfolio">
+                            <span class="badge badge-danger badge-skill">MariaDB</span>
+                        </a>
+                        <a href="#portfolio/4">
+                            <span class="badge badge-danger badge-skill">JavaScript</span>
+                        </a>
+                        <a href="#portfolio">
+                            <span class="badge badge-danger badge-skill">Vue.js</span>
+                        </a>
+                        <a href="#portfolio/3">
+                            <span class="badge badge-danger badge-skill">JQuery</span>
+                        </a>
+                        <a href="#portfolio">
+                            <span class="badge badge-danger badge-skill">Node.js</span>
+                        </a>
+                        <a href="#portfolio">
+                            <span class="badge badge-danger badge-skill">Phantom.js</span>
+                        </a>
+                        <a href="#portfolio">
+                            <span class="badge badge-danger badge-skill">Casper.js</span>
+                        </a>
+                        <a href="#portfolio/7">
+                            <span class="badge badge-danger badge-skill">Python</span>
+                        </a>
+                        <a href="#portfolio/7">
+                            <span class="badge badge-danger badge-skill">Django</span>
+                        </a>
+                        <a href="#portfolio/7">
+                            <span class="badge badge-danger badge-skill">Flask</span>
+                        </a>
+                        <a href="#portfolio/7">
+                            <span class="badge badge-danger badge-skill">Nginx</span>
+                        </a>
+                        <a href="#portfolio">
+                            <span class="badge badge-danger badge-skill">Gunicorn</span>
+                        </a>
+                        <a href="#portfolio/3">
+                            <span class="badge badge-danger badge-skill">HTML</span>
+                        </a>
+                        <a href="#portfolio/3">
+                            <span class="badge badge-danger badge-skill">CSS</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="portfolio-arrow-container">
+                <div id="portfolio-arrow" class="text-center">
+                    <a href="#portfolio"></a>
+                </div>
+            </div>
+        </div>
+        <div class="section" data-anchor="portfolio">
+            <div class="slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1><a target="_blank" href="http://wikiItem.com">WikiItem.com</a> <span class="work-date">(срок 1 год и 2 месяца)</span></h1>
+                            <p>
+                                Торговая площадка, в которой любой желающий может создать собственный магазин. База насчитывает более 550 000 товаров, которые можно
+                                продавать в своем магазине. Свои товары можно загрузить через REST API или добавить  вручную, через конструктор. Конструктор помогает
+                                быстро добавлять товары, он автоматически ищет и предлагает изображения, видеообзоры.
+                                Редактирование товаров построено по принципу википедии. За наполнение базы начисляется рейтинг.
+                            </p>
+
+                            <h6 class="margin-top-40"><b>Мое участие:</b></h6>
+                            <p>Проект полностью разработан мной. Кроме самого сайта было решено много задач по парсингу и автоматической обработке
+                                большого количества товаров. Создан REST API для загрузки товаров. Создано 5 отдельных
+                                вспомогательных REST-сервисов.</p>
+
+                            <h6><b>Использовал технологии:</b></h6>
+                            <p>
+                                <span class="technology">
+                                    <i class="devicon-php-plain"></i>
+                                    PHP
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-yii-plain"></i>
+                                    <br>
+                                    Yii 2
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-laravel-plain"></i>
+                                    Lumen
+                                </span>
+
+                                <span class="technology">
+                                    <i class="devicon-mysql-plain"></i>
+                                    SQL
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-mysql-plain"></i>
+                                    MariaDB
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-mongodb-plain"></i>
+                                    MongoDB
+                                </span>
+
+                                <span class="technology">
+                                    <i class="devicon-javascript-plain"></i>
+                                    JavaScript
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-vuejs-plain"></i>
+                                    Vue.js
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-nodejs-plain"></i>
+                                    Node.js
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-nodejs-plain"></i>
+                                    Phantom.js
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-jquery-plain"></i>
+                                    JQuery
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-bootstrap-plain"></i>
+                                    Bootstrap
+                                </span>
+
+                                <span class="technology">
+                                    <i class="devicon-python-plain"></i>
+                                    Python
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-python-plain"></i>
+                                    Scrapy
+                                </span>
+                            </p>
+
+                            <h6><b>Интегрировал API:</b></h6>
+                            <p>Ebay, Amazon, Aliexpress, YouTube, Яндекс Маркет</p>
+
+                            <h6><b>Парсинг данных:</b></h6>
+                            <p>Google Images, Яндекс Маркет, Amazon Products</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1><a target="_blank" href="https://textdeliver.com/">TextDeliver.com</a> <span class="work-date">(срок 6 месяцев)</span></h1>
+                            <p>
+                                Сервис для создания "продвинутых" смс рассылок. С TextDeliver можно в пару кликов создать список получателей и запланировать
+                                для них отправку сообщений. Сообщения будут отправляться через заданные промежутки. Дальнейшее общение с клиентом происходит
+                                через чат. Есть даже автоответчик, зачитывающий сообщения милым компьютерным голосом :)
+                            </p>
+
+                            <h6 class="margin-top-40"><b>Мое участие:</b></h6>
+                            <p>
+                                Основная часть серверной разработки была на мне. Отправка / получение смс сообщений через API, планировщик отправки,
+                                конструктор очередей, автоответчик и.т.д.
+                            </p>
+                            <h6><b>Использовал технологии:</b></h6>
+                            <p>
+                                <span class="technology">
+                                    <i class="devicon-php-plain"></i>
+                                    PHP
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-laravel-plain"></i>
+                                    Laravel
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-mysql-plain"></i>
+                                    MySql
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-vuejs-plain"></i>
+                                    Vue.js
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-jquery-plain"></i>
+                                    JQuery
+                                </span>
+                            </p>
+
+                            <h6><b>Интегрировал API:</b></h6>
+                            <p>Twilio, CallFire, CallRail</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1><a target="_blank" href="https://direct.chopochom.com">ЧеПочем админ пенель</a> <span class="work-date">(срок 9 месяцев)</span></h1>
+                            <p>
+                                Для рекламного агенства ЧеПочем создана панель управления контекстной рекламой и клиентами.
+                                Были автоматизированы: подбор ключевых слов, создание рекламных компаний в Яндекс.Директ, сбор статистики, управление клиентами и их балансом.
+                                Эта панель позволила свести к минимуму рутинную работу компании, а клиентам дала удобную и информативную панель управления их рекламой.
+                            </p>
+                            <h6 class="margin-top-40"><b>Мое Участие:</b></h6>
+                            <p>
+                                Разрабатывал весь проект кроме верстки. Было много работы с API Яндекс.Директ. Часто писал и оптимизировал сложные SQL-запросы
+                                так как в базе было больше 130 таблиц и по ним нужно было делать статистические выборки и агрегировать данные. Создал диспетчер задач,
+                                в котором отображается прогресс выполнения ресурсоемких скриптов. Работал с русской морфологией с помощью библиотеки phpMorphy.
+                            </p>
+
+                            <h6><b>Использовал технологии:</b></h6>
+                            <p>
+                                <span class="technology">
+                                    <i class="devicon-php-plain"></i>
+                                    PHP
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-yii-plain"></i>
+                                    <br>
+                                    Yii
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-mysql-plain"></i>
+                                    SQL
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-mysql-plain"></i>
+                                    MySql
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-jquery-plain"></i>
+                                    JQuery
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-bootstrap-plain"></i>
+                                    Bootstrap
+                                </span>
+                            </p>
+
+                            <h6><b>Интегрировал API:</b></h6>
+                            <p>Yandex.Direct, WebMoney, Yandex.Money</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1><a target="_blank" href="https://www.a2xanxiety.com">a2xanxiety.com</a> <span class="work-date">(срок 1 год и 1 месяц)</span></h1>
+                            <p>Продажа пищевых добавок по подписке. Кроме интернет магазина есть панель управления подписками, заказами, клиентами. Рассылка рекламных материалов</p>
+                            <h6 class="margin-top-40"><b>Мое участие:</b></h6>
+                            <p>
+                                <i>Первый этап:</i> Внедрил прием платежей через Stripe, Amazon Pay, переделал оформление заказа, доработал админ панель.
+                                <br>
+                                <i>Второй этап:</i> Переписал проект с нуля на Laravel и продолжил его развитие.
+                                (первая версия была написана на самодельном фреймворке нашими индийскими коллегами)
+                            </p>
+                            <h6><b>Использовал технологии:</b></h6>
+                            <p>
+                                <span class="technology">
+                                    <i class="devicon-php-plain"></i>
+                                    PHP
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-laravel-plain"></i>
+                                    Laravel
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-mysql-plain"></i>
+                                    MySql
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-jquery-plain"></i>
+                                    JQuery
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-bootstrap-plain"></i>
+                                    Bootstrap
+                                </span>
+                            </p>
+
+                            <h6><b>Интегрировал API:</b></h6>
+                            <p>Stripe, Amazon Pay</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1><a target="_blank" href="https://pressplay.io">PressPlay.io</a> <span class="work-date">(срок 3 месяца)</span></h1>
+                            <p>
+                                Сервис поможет создать одностраничный сайт с видеорекламой и собрать базу клиентов. Основная фишка проекта - это видеоплеер.
+                                У него много настроек и маркетинговых инструментов, он собирает статистику и отстлеживает поведение.
+                                Есть конструктор шаблонов, у каждого их которых свои блоки и настройки.
+                            </p>
+                            <h6 class="margin-top-40"><b>Мое участие:</b></h6>
+                            <p>
+                                Довел до ума готовый проект. Пришлось разобраться в большом объеме JavaScript-кода, для корректной работы видеоплеера.
+                                Помог многим пользователям сервиса, часто просили добавить новые функции, слали баг-репорты. Благодаря этому удалось поработать
+                                со всеми компонентами сервиса.
+                            </p>
+
+                            <h6><b>Использовал технологии:</b></h6>
+                            <p>
+                                <span class="technology">
+                                    <i class="devicon-php-plain"></i>
+                                    PHP
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-laravel-plain"></i>
+                                    Laravel
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-mysql-plain"></i>
+                                    MySql
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-javascript-plain"></i>
+                                    JavaScript
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-html5-plain"></i>
+                                    VideoAPI
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-jquery-plain"></i>
+                                    JQuery
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1><a target="_blank" href="https://nutshellmetrics.com/tour/keyword-rankings/">NutshellMetrics.com</a> <span class="work-date">(срок 2 месяца)</span></h1>
+                            <p>
+                                Агрегатор статистик просмотров и кликов с различных площадок. С помощью этого сервиса можно собрать в одном месте статистику просмотров на YouTube,
+                                статистику кликов по рекламным компаниям в Google, Facebook и многим другим сервисам.
+                            </p>
+
+                            <h6 class="margin-top-40"><b>Мое Участие:</b></h6>
+                            <p>
+                                Развитие существующего проекта. Внедрил систему генерации и продления SSL-сертификатов для клиентских поддоменов с помощью сервиса LetsEncrypt.
+                                Добавил новые возможности, исправил баги.
+                            </p>
+                            <h6><b>Использовал технологии:</b></h6>
+                            <p>
+                                <span class="technology">
+                                    <i class="devicon-php-plain"></i>
+                                    PHP
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-mysql-plain"></i>
+                                    MySql
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-javascript-plain"></i>
+                                    JavaScript
+                                </span>
+                            </p>
+
+                            <h6><b>Интегрировал API:</b></h6>
+                            <p>LetsEncrypt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>AdsFree <span class="work-date">(срок 3 месяца)</span></h1>
+                            <p>
+                                Доска бесплатных объявлений. После регистрации можно добавлять объявления и управлять ими в личном кабинете.
+                                Также личный кабинет позволяет отслеживать статистику по объявлениям. Раздел для модераторов, в котором можно банить пользователей и объявления.
+                                Администраторский раздел для управления модераторами, пользователями, рекламой. Система виджетов для показа рекламы в различных частях сайта.
+                            </p>
+
+                            <h6 class="margin-top-40"><b>Мое участие:</b></h6>
+                            <p>
+                                Мой первый проект на Yii, написан в начале 2012 года еще на первой версии фреймворка.
+                                Использовались прорывные для того времени технологии JQuery, Twitter Bootstrap, AJAX.
+                            </p>
+                            <h6><b>Использовал технологии:</b></h6>
+                            <p>
+                                <span class="technology">
+                                    <i class="devicon-php-plain"></i>
+                                    PHP
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-yii-plain"></i>
+                                    <br>
+                                    Yii
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-mysql-plain"></i>
+                                    MySql
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-jquery-plain"></i>
+                                    JQuery
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-bootstrap-plain"></i>
+                                    Bootstrap
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1><a href="http://selfie-store.ru">Selfie Store</a></h1>
+                            <p>
+                                Интернет магазин. Занимаюсь этим проектом в свободное время с целью изучения Django.
+                                Уже готов каталог товаров, корзина, заказ товаров.
+                                Панель управления работает на Django admin. В ней уже реализовано управление товарами и просмотр истории заказов.
+                                Осталось сделать красивый дизайн и развернуть проект.
+                                <br>
+                                <br>
+                                Кроме магазина создан ВКонтакте бот на Flask для группы магазина.
+                            </p>
+
+                            <h6 class="margin-top-40"><b>Использовал технологии:</b></h6>
+                            <p>
+                                <span class="technology">
+                                    <i class="devicon-python-plain"></i>
+                                    Python
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-django-plain"></i>
+                                    Django
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-python-plain"></i>
+                                    Flask
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-postgresql-plain"></i>
+                                    PostgreSQL
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-vuejs-plain"></i>
+                                    Vue.js
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-bootstrap-plain"></i>
+                                    Bootstrap
+                                </span>
+                                <span class="technology">
+                                    <i class="devicon-nginx-plain"></i>
+                                    Nginx
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" data-anchor="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="me.png" id="me" class="rounded" alt="Александр Кузьменко">
+                    </div>
+                    <div class="col-6">
+                        <h1>Обо мне</h1>
+                        <p>Здравствуйте, меня зовут Александр Кузьменко, мне 26. Добро пожаловать в мое портфолио.</p>
+                        <p>В 2013 году закончил Таврический национальный университет имени В. И. Вернадского по специальности -
+                            «Прикладная физика».
+                        </p>
+                        <p>Занимаюсь веб-разработкой с 2010 года.
+                            Из которых более 3 лет пишу приложения на Laravel, более 5 лет на Yii framework.
+                            Несколько долгосрочных проектов реализовал самостоятельно с нуля, также много работал в команде.
+                        </p>
+
+                        <p>В настоящий момент изучаю Python и Django.</p>
+
+                        <h4>Контакты</h4>
+                        <b>E-mail:</b> alexanderkuzmenko.com@gmail.com <br>
+                        <b>Skype:</b> live:alexanderkuzmenko.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fullpage/jquery.fullpage.min.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
