@@ -1,0 +1,68 @@
+.header {
+    position: relative;
+    background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/r8K5nG9Pxiyh9wvn6/videoblocks-futuristic-technology-abstract-background-beautiful-plexus-loop-animation_bz2n7vd5z_thumbnail-full01.png") top center no-repeat;
+    background-size: cover;
+    padding: 80px 0 150px 0;
+    color: #fff;
+}
+
+.corner {
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 75px;
+    -webkit-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    transform: skewY(-2deg);
+    -webkit-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+
+.name {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.font-size-60 {
+    font-size: 60px;
+}
+
+.contact-link {
+    color: #555;
+    padding-right: 20px;
+}
+
+.card {
+    border: none !important;
+}
+
+.card a {
+    color: #212529;
+    text-decoration: underline;
+}
+
+.card-body {
+    padding: 1.25rem 0;
+}
+
+.delimiter {
+    position: relative;
+    border-top: 1px solid #d6d6d6;
+    text-align: center;
+}
+
+.delimiter div {
+    position: absolute;
+    top: -13px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.delimiter span {
+    background: #fff;
+    padding:  10px 30px;
+}

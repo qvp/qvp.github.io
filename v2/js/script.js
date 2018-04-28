@@ -1,0 +1,3 @@
+$(function() {
+    $(".open-modal").animatedModal();
+});
