@@ -1,0 +1,203 @@
+body {
+    padding-top: 318px;
+    background: rgb(0, 9, 12) url("bg_light.jpg") top center no-repeat fixed;
+    background-position-y: -233px;
+
+}
+
+#scroll {
+    background: #fff;
+}
+
+.corner {
+    background: #fff;
+    width: 100%;
+    height: 75px;
+    -webkit-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    transform: skewY(-2deg);
+    -webkit-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+
+.name {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.font-size-60 {
+    font-size: 60px;
+}
+
+.font-size-30 {
+    font-size: 30px;
+}
+
+.contact-link {
+    color: #555;
+    padding-right: 20px;
+}
+
+.card {
+    border: none !important;
+}
+
+.card a {
+    color: #212529;
+    text-decoration: underline;
+}
+
+.card-body {
+    padding: 1.25rem 0;
+}
+
+.delimiter {
+    position: relative;
+    border-top: 1px solid #d6d6d6;
+    text-align: center;
+}
+
+.delimiter div {
+    position: absolute;
+    top: -13px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.delimiter span {
+    background: #fff;
+    padding:  10px 30px;
+}
+
+.badge-skill {
+    cursor: pointer;
+    border-radius: 0;
+    color: #666;
+    background-color: rgba(203,209,211,.3);
+    font-weight: 100;
+    padding: .5em .4em;
+    margin-top: 6px;
+    font-size: 100%;
+}
+
+.badge-skill.active {
+    background: #dc3545 !important;
+    color: #fff;
+}
+
+.card-disabled {
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.mt-10 {
+    margin-top: 6rem!important;
+}
+
+.skill-label {
+    min-width: 110px;
+    display: inline-block;
+}
+
+.open-modal {
+    color: #dc3545 !important;
+}
+
+.card img {
+    display: none;
+}
+
+.animated {
+    background: #fff !important;
+}
+
+.animated .modal-content {
+    border: none;
+}
+
+.close-animatedModal {
+    text-align: center;
+    font-size: 50px;
+    color: #333;
+    cursor: pointer;
+}
+
+a, a:hover {
+    color: #212529;
+}
+
+.work-date {
+    font-weight: 100;
+    color: #6c757d;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.technology {
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #d6d6d6;
+    display: inline-table;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.badge-skill:hover {
+    background: rgba(203,209,211,.7);
+}
+
+.technology i {
+    font-size: 30px;
+}
+
+.technology-django {
+    padding: 0;
+}
+
+.technology-django i {
+    font-size: 35px;
+}
+
+.footer {
+    position: relative;
+    background: rgb(237,239,240);
+}
+
+.footer .corner {
+    background: inherit;
+    top: 0px;
+}
+
+.mb-10 {
+    margin-bottom: 6rem!important;
+}
+
+.technology-drf {
+    width: 180px;
+}
+
+.technology i.fab, .technology i.fas {
+    font-size: 32px;
+}
+
+#animatedModal h6 {
+    margin-top: 20px;
+}
+
+#ava {
+    margin: -180px auto 0 auto;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#ava img {
+    width: 100%;
+    height: auto;
+}
