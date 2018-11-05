@@ -36,7 +36,11 @@ body {
 
 .contact-link {
     color: #555;
-    padding-right: 20px;
+    border-bottom: 1px dashed;
+}
+
+.contact-link:hover {
+    text-decoration: none !important;
 }
 
 .card {
@@ -118,10 +122,10 @@ body {
 }
 
 .close-animatedModal {
-    text-align: center;
+    text-align: right;
     font-size: 50px;
-    color: #333;
     cursor: pointer;
+    padding-right: 30px;
 }
 
 a, a:hover {
@@ -200,4 +204,8 @@ a, a:hover {
 #ava img {
     width: 100%;
     height: auto;
+}
+
+#gmail-icon {
+    padding-right: 5px;
 }
