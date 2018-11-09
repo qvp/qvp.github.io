@@ -1,3 +1,11 @@
+DATA.portfolio.map((item) => {
+    return item.previews.map((src) => {
+        let image = new Image();
+        image.src = 'previews/' + src;
+        return image
+    });
+});
+
 let app = new Vue({
     el: '#scroll',
     data: {
