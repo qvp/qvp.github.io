@@ -25,178 +25,133 @@ DATA = {
         {
             id: 1,
             title: 'Python',
-            icon: 'devicon-python-plain',
-            wrap_class: null,
             group: 1
         },
         {
             id: 2,
             title: 'Django',
-            icon: 'devicon-django-plain',
-            wrap_class: 'technology-django',
             group: 1
         },
         {
             id: 3,
             title: 'Django REST framework',
-            icon: 'devicon-django-plain',
-            wrap_class: 'technology-django technology-drf',
             group: 1
         },
         {
             id: 4,
             title: 'aiohttp',
-            icon: null,
-            wrap_class: null,
             group: 1
         },
         {
             id: 5,
             title: 'Flask',
-            icon: null,
-            wrap_class: null,
             group: 1
         },
         {
             id: 6,
             title: 'Scrapy',
-            icon: null,
-            wrap_class: null,
             group: 1
         },
         {
             id: 7,
             title: 'SQL',
-            icon: null,
-            wrap_class: null,
             group: 2
         },
         {
             id: 8,
             title: 'PostgreSQL',
-            icon: 'devicon-postgresql-plain',
-            wrap_class: null,
             group: 2
         },
         {
             id: 9,
             title: 'Redis',
-            icon: 'devicon-redis-plain',
-            wrap_class: null,
             group: 2
         },
         {
             id: 10,
             title: 'MongoDB',
-            icon: 'devicon-mongodb-plain',
-            wrap_class: null,
             group: 2
         },
         {
             id: 11,
             title: 'MySql',
-            icon: 'devicon-mysql-plain',
-            wrap_class: null,
             group: 2
         },
         {
             id: 12,
             title: 'MariaDB',
-            icon: 'devicon-mysql-plain',
-            wrap_class: null,
             group: 2
         },
         {
             id: 13,
             title: 'Git',
-            icon: 'devicon-git-plain',
-            wrap_class: null,
             group: 3
         },
         {
             id: 14,
             title: 'Docker',
-            icon: 'devicon-docker-plain',
-            wrap_class: null,
             group: 3
         },
         {
             id: 15,
             title: 'Vagrant',
-            icon: null,
-            wrap_class: null,
             group: 3
         },
         {
             id: 16,
             title: 'Swagger',
-            icon: null,
-            wrap_class: null,
             group: 3
         },
         {
             id: 17,
             title: 'Bash scripting',
-            icon: null,
-            wrap_class: null,
             group: 3
         },
         {
             id: 18,
             title: 'PHP',
-            icon: 'devicon-php-plain',
-            wrap_class: null,
             group: 4
         },
         {
             id: 19,
             title: 'Laravel',
-            icon: 'devicon-laravel-plain',
-            wrap_class: null,
             group: 4
         },
         {
             id: 20,
             title: 'Yii',
-            icon: 'devicon-yii-plain',
-            wrap_class: null,
             group: 4
         },
         {
             id: 20,
             title: 'JavaScript',
-            icon: 'devicon-javascript-plain',
-            wrap_class: null,
             group: 5
         },
         {
             id: 21,
             title: 'Vue.js',
-            icon: 'devicon-vuejs-plain',
-            wrap_class: null,
             group: 5
         },
         {
             id: 22,
             title: 'JQuery',
-            icon: 'devicon-jquery-plain',
-            wrap_class: null,
             group: 5
         },
         {
             id: 23,
             title: 'HTML',
-            icon: 'devicon-html5-plain',
-            wrap_class: null,
             group: 5
         },
         {
             id: 24,
             title: 'CSS',
-            icon: 'devicon-css3-plain',
-            wrap_class: null,
             group: 5
         },
+        {
+            id: 25,
+            title: 'asyncio',
+            group: 1
+        }
     ],
 
     portfolio: [
@@ -208,7 +163,7 @@ DATA = {
             term: '4 месяца',
             desc: 'Приложение позволяет объединять контент из Twitter, Youtube, ВКонтакте, Instagram на одной странице. Пользователь сам решает как сгруппировать подписки (Развлекательные, Новостные... что угодно)',
             my_work: 'Разработка серверной части полностью была на мне. Все новости сохраняются на нашем сервере. Так как тысячи пользвателей мугут подписатся на один и тот же канал, пришлось пойти на нестандартные решения, чтобы избежать дублей новостей. Это сильно усложнило логику хранения и формирования персонализированных новостных лент но зато существенно сократило количество запросов к API Twitter/Youtube/ВКонтакте/Instagram и уменьшило размер БД. API полность готово и после окончания разработки мобильных приложений под IOS / Android сервис будет запущен.',
-            tags: [1,2,3,7,8,14],
+            tags: [1,2,3,7,8,14, 13],
             api: ['Twitter', 'Instagram', 'Youtube', 'ВКонтакте'],
             parsing: [],
             previews: ['newstabs/1.png', 'newstabs/2.png', 'newstabs/3.png']
@@ -221,7 +176,7 @@ DATA = {
             term: '1 год и 2 месяца',
             desc: 'Торговая площадка, в которой любой желающий может создать собственный магазин. База насчитывает более 550 000 товаров, которые можно продавать в своем магазине. Свои товары можно загрузить через REST API или добавить вручную, через конструктор. Конструктор помогает быстро добавлять товары, он автоматически ищет и предлагает изображения, видеообзоры. Редактирование товаров построено по принципу википедии. За наполнение базы начисляется рейтинг.',
             my_work: 'Проект полностью разработан мной. Хоть он и не полностью разработан на python, но он заслуживает отдельного внимания так как в нем мне довелось применить почти весь стек своих знаний) В нем очень много функционала! Кроме самого сайта было решено много задач по парсингу и автоматической обработке большого количества товаров. Создан REST API для загрузки товаров. Создано 5 отдельных вспомогательных микросервисов.',
-            tags: [18,20,1,5,6,7,12,10,20,21,23,24],
+            tags: [18,20,1,5,6,7,12,10,21,23,24, 13],
             api: ['Ebay', 'Amazon', 'Aliexpress', 'YouTube', 'Яндекс Маркет'],
             parsing: ['Google Images', 'Яндекс Маркет', 'Amazon Products'],
             previews: ['wikiitem/1.png', 'wikiitem/2.png']
@@ -241,7 +196,7 @@ DATA = {
                 '- Парсинг координат планет и других данных с нескольких сайтов\n' +
                 '- Мини CRM для управления астрологами, сообщениями и.т.п\n' +
                 '- Импорт и приглашение друзей из почты и многое другое.',
-            tags: [18,19,7,11,9,21,23,24,15],
+            tags: [18,19,7,11,9,21,23,24,15, 13],
             api: ['CloudPayments', 'Dreamkas', 'Gmail', 'Яндекс Почта', 'Mail.ru', 'Vkontakte', 'Facebook', 'Odnoklassniki'],
             parsing: ['Таблицы координат планет', 'Несколько астрологических сайтов'],
             previews: ['astrologiko/1.png','astrologiko/2.png','astrologiko/3.png','astrologiko/4.png','astrologiko/5.png','astrologiko/6.png','astrologiko/7.png','astrologiko/8.png','astrologiko/9.png',]
@@ -254,7 +209,7 @@ DATA = {
             term: '1 месяц',
             desc: 'Интернет магазин аксессуаров для селфи. Для группы магазина ВКонтакте работает бот, отвечающий на сообщения.',
             my_work: 'Содержит каталог товаров, корзина, заказ товаров. Панель управления работает на Django admin. В ней реализовано управление товарами и просмотр истории заказов. Кроме магазина создан ВКонтакте бот на Flask для группы магазина.',
-            tags: [1,2,5,7,8],
+            tags: [1,2,3,5,7,8, 13],
             api: ['ВКонтакте'],
             parsing: [],
             previews: ['selfiestore/1.png', 'selfiestore/2.png', 'selfiestore/3.png', 'selfiestore/4.png',]
@@ -267,7 +222,7 @@ DATA = {
             term: '6 месяцев',
             desc: 'Сервис для создания "продвинутых" смс рассылок. С TextDeliver можно в пару кликов создать список получателей и запланировать для них отправку сообщений. Сообщения будут отправляться через заданные промежутки. Дальнейшее общение с клиентом происходит через чат. Есть даже автоответчик, зачитывающий сообщения милым компьютерным голосом :)',
             my_work: 'Основная часть серверной разработки была на мне. Отправка / получение смс сообщений через API, планировщик отправки, конструктор очередей, автоответчик и.т.д.',
-            tags: [18,19,7,11,21,22],
+            tags: [18,19,7,11,21,22, 13],
             api: ['Twilio', 'CallFire', 'CallRail', 'MailChimp'],
             parsing: [],
             previews: []
@@ -279,7 +234,7 @@ DATA = {
             term: '1 мсеяц',
             desc: 'У сервиса есть веб-сайт, мобильное приложение, админ панель. По функционалу нужно было отображать на одной странице несколько типов сущностей данных. А также комбинации этих данных отличались для веб, мобильной и админ панели. Поэтому было решено использовать GraphQL.',
             my_work: 'Мной разработана серверная часть приложения - GraphQL API',
-            tags: [1,5,7,8],
+            tags: [1,5,7,8, 13],
             api: [],
             parsing: [],
             previews: ['burgerbeer/1.png', 'burgerbeer/2.png']
@@ -292,7 +247,7 @@ DATA = {
             term: '9 месяцев',
             desc: 'Для рекламного агенства ЧеПочем создана панель управления контекстной рекламой и клиентами. Были автоматизированы: подбор ключевых слов, создание рекламных компаний в Яндекс.Директ, сбор статистики, управление клиентами и их балансом. Эта панель позволила свести к минимуму рутинную работу компании, а клиентам дала удобную и информативную панель управления их рекламой.',
             my_work: 'Разрабатывал весь проект кроме верстки. Было много работы с API Яндекс.Директ. Часто писал и оптимизировал сложные SQL-запросы так как в базе было больше 130 таблиц и по ним нужно было делать статистические выборки и агрегировать данные. Создал диспетчер задач, в котором отображается прогресс выполнения ресурсоемких скриптов. Работал с русской морфологией с помощью библиотеки phpMorphy.',
-            tags: [18,20,7,11,22],
+            tags: [18,20,7,11,22, 13],
             api: ['Яндекс Direct, WebMoney, Яндекс Money'],
             parsing: [],
             previews: []
@@ -307,7 +262,7 @@ DATA = {
             my_work: 'Мной разработана серверная часть приложения и демо веб-версия клиента игры.\n' +
                 'Игровой цикл запускается на сервере. В нем происходит проверка столкновений между объектами, попаданий игроков и другая логика. клиенты лиш получают "состояние игры" и отрисовывают графику.\n' +
                 'Игровой "движок" для ДЕМО-клиента тоже разработан мной на JavaScript.',
-            tags: [1,4],
+            tags: [1,4, 13, 25],
             api: [],
             parsing: [],
             previews: []
