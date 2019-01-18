@@ -151,7 +151,27 @@ DATA = {
             id: 25,
             title: 'asyncio',
             group: 1
-        }
+        },
+        {
+            id: 26,
+            title: 'Linux',
+            group: 6
+        },
+        {
+            id: 27,
+            title: 'Nginx',
+            group: 6
+        },
+        {
+            id: 28,
+            title: 'Gunicorn',
+            group: 6
+        },
+        {
+            id: 13,
+            title: 'Git',
+            group: 6
+        },
     ],
 
     portfolio: [
