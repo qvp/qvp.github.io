@@ -57,18 +57,25 @@
 
                 <p class="mt-5">
                     Занимаюсь серверным программированием на протяжении последних 9 лет. Эта область программирования мне наиболее интересна.
-                    Кроме backend-а некоторое время занимался frontend-разработкой, созданием IOS приложений на Objective-C/Swift, созданием
-                    игр на JavaScript. Но как говорится - все запросы идут на сервер:)
+                    Кроме backend-а некоторое время занимался: frontend-разработкой на JavaScript/Vue.js, созданием IOS приложений на Objective-C/Swift, созданием
+                    2D игр на SpriteKit/Box2D/JS. Но как говорится - все запросы идут на сервер:)
                 </p>
                 <p>
                     Для меня программирование в первую очередь любимое дело, а уже потом - работа. Поэтому для меня не бывает неважных проектов. К каждому проекту я прикладываю максимум усилий.
-                    Особое внимание уделяю качеству кода. Соблюдение принципов SOLID, KISS, DRY. Продумываю архитектуру проекта и баз данных. Покрываю код тестами.
+                    Особое внимание уделяю качеству кода. <!--Соблюдение принципов SOLID, KISS, DRY.--> Продумываю архитектуру проекта и баз данных. Покрываю код тестами.
                     Автоматизирую часто повторяющиеся рутинные действия.
+                </p>
+                <!--<p>
+                    В первую очередь технологии и принципы. Я изучаю не языки программирования а программирование на примере конкретных языков. Люблю глубоко копнуть в вопросе. низкоуровневое
+                    программирование. Стремлюсь к пониманию всех процессов на низком уровне. чтобы достич максиммальной производительности.
                 </p>
                 <p>
                     Отлично знаю Python: его возможности, особенности, стандартные библиотеки. Мой основной синхронный стек: Django, Django REST framework. Асинхронный: AsyncIO, aiohttp, aiolibs.
-                    Хранение данных: SQL, PostgreSQL, MongoDB, Redis. Развертывание проектов: Docker. Операционная система: Linux.
+                    Хранение данных: SQL, PostgreSQL, MongoDB, Redis. Развертывание проектов: Docker. Операционные системы: Unix.
                 </p>
+                <p>
+                    {образование}
+                </p>-->
 
                 <p>
                     <img src="css/gmail.png" id="gmail-icon"><a href="mailto:alexanderkuzmenko.com@gmail.com" class="contact-link">alexanderkuzmenko.com@gmail.com</a>
@@ -79,7 +86,7 @@
                     <div><span>Некоторые мои работы</span></div>
                 </div>
                 <div class="mb-5 selectable-badges">
-                    <h5>Показать по тегу:</h5>
+                    <h5>Фильтр по тегу:</h5>
 
                     <template v-for="group in tagsGrouped">
                         <span class="skill-label">{{ group.title }}:</span>
@@ -91,13 +98,11 @@
                     </template>
                 </div>
 
-                <div v-for="(chunk, index) in portfolioChunked" class="card-deck" :class="{'mt-5': index > 0}">
-                    <div class="card" v-for="item in chunk" :class="{'card-disabled': filterByTag !== null && item.tags.indexOf(filterByTag) === -1}">
-                      <div class="card-body">
-                        <h5 class="card-title">{{ item.title }}</h5>
-                        <p class="card-text">{{ item.short_desc }}</p>
+                <div v-for="(chunk, index) in portfolioChunked" class="row mt-5">
+                    <div class="col-3" v-for="item in chunk">
+                        <h5>{{ item.title }}</h5>
+                        <p>{{ item.short_desc }}</p>
                         <a href="#animatedModal" :data-page="item.id" class="open-modal">Подробнее ...</a>
-                      </div>
                     </div>
                 </div>
 
@@ -126,7 +131,7 @@
                             <div class="col-12 work-margin-top">
                                 <h5 class="work-title">
                                     <a target="_blank" :href="item.link">{{ item.title }}</a>
-                                    <span class="work-date">(срок {{ item.term }})</span>
+                                    <span class="work-date" v-if="item.term">(срок {{ item.term }})</span>
                                 </h5>
                                 <p>{{ item.desc }}</p>
 

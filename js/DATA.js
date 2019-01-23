@@ -10,16 +10,20 @@ DATA = {
         },
         {
             id: 3,
-            title: 'Tools'
+            title: 'DevOps'
         },
         {
             id: 4,
             title: 'PHP'
         },
-        {
+        /*{
             id: 5,
             title: 'Frontend'
-        }
+        },
+        {
+            id: 6,
+            title: 'GO'
+        }*/
     ],
     tags: [
         {
@@ -83,28 +87,8 @@ DATA = {
             group: 2
         },
         {
-            id: 13,
-            title: 'Git',
-            group: 3
-        },
-        {
             id: 14,
             title: 'Docker',
-            group: 3
-        },
-        {
-            id: 15,
-            title: 'Vagrant',
-            group: 3
-        },
-        {
-            id: 16,
-            title: 'Swagger',
-            group: 3
-        },
-        {
-            id: 17,
-            title: 'Bash scripting',
             group: 3
         },
         {
@@ -155,21 +139,31 @@ DATA = {
         {
             id: 26,
             title: 'Linux',
-            group: 6
+            group: 3
         },
         {
             id: 27,
             title: 'Nginx',
-            group: 6
+            group: 3
+        },
+        {
+            id: 17,
+            title: 'Bash scripting',
+            group: 3
         },
         {
             id: 28,
             title: 'Gunicorn',
-            group: 6
+            group: 3
         },
         {
             id: 13,
             title: 'Git',
+            group: 3
+        },
+        {
+            id: 29,
+            title: 'GO',
             group: 6
         },
     ],
@@ -216,7 +210,7 @@ DATA = {
                 '- Парсинг координат планет и других данных с нескольких сайтов\n' +
                 '- Мини CRM для управления астрологами, сообщениями и.т.п\n' +
                 '- Импорт и приглашение друзей из почты и многое другое.',
-            tags: [18,19,7,11,9,21,23,24,15, 13],
+            tags: [18,19,7,11,9,21,23,24,13],
             api: ['CloudPayments', 'Dreamkas', 'Gmail', 'Яндекс Почта', 'Mail.ru', 'Vkontakte', 'Facebook', 'Odnoklassniki'],
             parsing: ['Таблицы координат планет', 'Несколько астрологических сайтов'],
             previews: ['astrologiko/1.png','astrologiko/2.png','astrologiko/3.png','astrologiko/4.png','astrologiko/5.png','astrologiko/6.png','astrologiko/7.png','astrologiko/8.png','astrologiko/9.png',]
@@ -287,5 +281,31 @@ DATA = {
             parsing: [],
             previews: []
         },
+        /*{
+            id: 9,
+            title: 'Regency',
+            link: null,
+            short_desc: 'Корпокативный сайт и админ панель.',
+            term: null,
+            desc: 'Корпокативный сайт и админ панель. Админ панель сделана на Django Admin.',
+            my_work: 'Мной разработана серверная часть приложения.\n',
+            tags: [1,2,7,8,14,26,27,17,28,13],
+            api: [],
+            parsing: [],
+            previews: []
+        },
+        {
+            id: 10,
+            title: 'Freelance Feed',
+            link: null,
+            short_desc: 'Уведомления о новых заказах на основных биржах фриланса.',
+            term: null,
+            desc: 'Уведомления о новых заказах на основных биржах фриланса.',
+            my_work: 'Мной разработана серверная часть приложения и боты.\n',
+            tags: [1,2,7,8,14,26,27,17,28,13],
+            api: [],
+            parsing: [],
+            previews: []
+        },*/
     ]
 };
