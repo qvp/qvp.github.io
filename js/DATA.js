@@ -2,21 +2,21 @@ DATA = {
     tag_groups: [
         {
             id: 1,
-            title: 'Python'
+            title: 'Python / Фреймворки'
         },
         {
             id: 2,
-            title: 'Базы данных'
+            title: 'Базы данных / Брокеры'
         },
         {
             id: 3,
-            title: 'DevOps'
+            title: 'DevOps / Инструменты'
         },
-        {
+        /*{
             id: 4,
             title: 'PHP'
         },
-        /*{
+        {
             id: 5,
             title: 'Frontend'
         },
@@ -44,6 +44,11 @@ DATA = {
         {
             id: 4,
             title: 'aiohttp',
+            group: 1
+        },
+        {
+            id: 30,
+            title: 'Celery',
             group: 1
         },
         {
@@ -133,7 +138,7 @@ DATA = {
         },
         {
             id: 25,
-            title: 'asyncio',
+            title: 'AsyncIO',
             group: 1
         },
         {
@@ -165,6 +170,11 @@ DATA = {
             id: 29,
             title: 'GO',
             group: 6
+        },
+        {
+            id: 31,
+            title: 'RabbitMQ',
+            group: 2
         },
     ],
 
@@ -283,29 +293,29 @@ DATA = {
         },
         /*{
             id: 9,
-            title: 'Regency',
-            link: null,
-            short_desc: 'Корпокативный сайт и админ панель.',
-            term: null,
-            desc: 'Корпокативный сайт и админ панель. Админ панель сделана на Django Admin.',
-            my_work: 'Мной разработана серверная часть приложения.\n',
-            tags: [1,2,7,8,14,26,27,17,28,13],
-            api: [],
-            parsing: [],
-            previews: []
-        },
-        {
-            id: 10,
             title: 'Freelance Feed',
             link: null,
             short_desc: 'Уведомления о новых заказах на основных биржах фриланса.',
             term: null,
             desc: 'Уведомления о новых заказах на основных биржах фриланса.',
             my_work: 'Мной разработана серверная часть приложения и боты.\n',
+            tags: [1,2,7,8,14,30,26,27,17,28,13],
+            api: [],
+            parsing: ['Freelansim.ru', 'FL.ru', 'Weblancer.net'],
+            previews: []
+        },*/
+        {
+            id: 10,
+            title: 'Regency P.M.',
+            link: null,
+            short_desc: 'Корпоративный сайт и админ панель.',
+            term: null,
+            desc: 'Корпокативный сайт и админ панель. Админ панель сделана на Django Admin.',
+            my_work: 'Мной разработана серверная часть приложения.\n',
             tags: [1,2,7,8,14,26,27,17,28,13],
             api: [],
             parsing: [],
-            previews: []
-        },*/
+            previews: ['regency/1.png','regency/2.png','regency/3.png','regency/4.png','regency/5.png','regency/6.png',]
+        },
     ]
 };

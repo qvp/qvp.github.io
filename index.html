@@ -78,7 +78,8 @@
                 </p>-->
 
                 <p>
-                    <img src="css/gmail.png" id="gmail-icon"><a href="mailto:alexanderkuzmenko.com@gmail.com" class="contact-link">alexanderkuzmenko.com@gmail.com</a>
+                    <b>Контакты:</b>&nbsp;&nbsp;&nbsp;<img src="css/gmail.png" id="gmail-icon"><a href="mailto:alexanderkuzmenko.com@gmail.com" class="contact-link">alexanderkuzmenko.com@gmail.com</a>
+                    <!--<b>Примеры кода:</b>&nbsp;&nbsp;&nbsp;<a href="https://github.com/qvp">Github</a>-->
                 </p>
 
                 <!-- Портфолио -->
@@ -86,10 +87,10 @@
                     <div><span>Некоторые мои работы</span></div>
                 </div>
                 <div class="mb-5 selectable-badges">
-                    <h5>Фильтр по тегу:</h5>
+                    <h6>Фильтр по тегу:</h6>
 
                     <template v-for="group in tagsGrouped">
-                        <span class="skill-label">{{ group.title }}:</span>
+                        <!--<span class="skill-label">{{ group.title }}:</span>-->
                         <span v-for="tag in group.tags"
                               :class="{active: tag.id === filterByTag}"
                               class="badge badge-danger badge-skill"
