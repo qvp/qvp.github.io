@@ -72,3 +72,12 @@ let app = new Vue({
        });
     }
 });
+
+if (location.hash.length > 1) {
+    let id = location.hash.substr(1);
+    DATA.portfolio.forEach((item) => {
+        if (item.id == id) {
+            $('a[data-page="'+id+'"]').click();
+        }
+    });
+}

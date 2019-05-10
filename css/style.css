@@ -216,8 +216,10 @@ a, a:hover {
     height: auto;
 }
 
-#gmail-icon {
+.icon {
     padding-right: 5px;
+    width: 20px;
+    height: auto;
 }
 
 .window {
@@ -313,4 +315,9 @@ a, a:hover {
 
 .work-margin-top {
     margin-top: 78px;
+}
+
+.width135 {
+    width: 135px;
+    display: inline-block;
 }
