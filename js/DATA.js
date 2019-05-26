@@ -306,7 +306,7 @@ DATA = {
         },*/
         {
             id: 10,
-            title: 'Regency P.M.',
+            title: 'RegencyProjectManagement.com',
             link: null,
             short_desc: 'Корпоративный сайт и админ панель.',
             term: null,
