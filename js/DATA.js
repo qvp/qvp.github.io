@@ -15,12 +15,12 @@ DATA = {
         /*{
             id: 4,
             title: 'PHP'
-        },
+        },*/
         {
             id: 5,
             title: 'Frontend'
         },
-        {
+        /*{
             id: 6,
             title: 'GO'
         }*/
@@ -106,11 +106,11 @@ DATA = {
             title: 'Laravel',
             group: 4
         },
-        {
-            id: 20,
-            title: 'Yii',
-            group: 4
-        },
+        // {
+        //     id: 20,
+        //     title: 'Yii',
+        //     group: 4
+        // },
         {
             id: 20,
             title: 'JavaScript',
@@ -220,7 +220,7 @@ DATA = {
                 '- Парсинг координат планет и других данных с нескольких сайтов\n' +
                 '- Мини CRM для управления астрологами, сообщениями и.т.п\n' +
                 '- Импорт и приглашение друзей из почты и многое другое.',
-            tags: [18,19,7,11,9,21,23,24,13],
+            tags: [18,19,7,11,9,20,21,23,24,13],
             api: ['CloudPayments', 'Dreamkas', 'Gmail', 'Яндекс Почта', 'Mail.ru', 'Vkontakte', 'Facebook', 'Odnoklassniki'],
             parsing: ['Таблицы координат планет', 'Несколько астрологических сайтов'],
             previews: ['astrologiko/1.png','astrologiko/2.png','astrologiko/3.png','astrologiko/4.png','astrologiko/5.png','astrologiko/6.png','astrologiko/7.png','astrologiko/8.png','astrologiko/9.png',]
