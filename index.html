@@ -125,8 +125,11 @@
                                 </h5>
                                 <p>{{ item.desc }}</p>
 
+                                <h6 v-if="item.link">Ссылка</h6>
+                                <a :href="item.link" target="_blank" v-if="item.link">{{ item.link }}</a>
+
                                 <h6 class="margin-top-40">Мое участие:</h6>
-                                <p class="pre-line">{{ item.my_work }}</p>
+                                <p class="pre-line" v-html="item.my_work"></p>
 
                                 <h6>Использовал технологии:</h6>
                                 <p>

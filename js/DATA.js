@@ -20,10 +20,10 @@ DATA = {
             id: 5,
             title: 'Frontend'
         },
-        /*{
+        {
             id: 6,
             title: 'GO'
-        }*/
+        },
     ],
     tags: [
         {
@@ -42,13 +42,18 @@ DATA = {
             group: 1
         },
         {
-            id: 4,
-            title: 'aiohttp',
+            id: 33,
+            title: 'Django Channels',
             group: 1
         },
         {
-            id: 30,
+            id: 32,
             title: 'Celery',
+            group: 1
+        },
+        {
+            id: 4,
+            title: 'aiohttp',
             group: 1
         },
         {
@@ -187,7 +192,7 @@ DATA = {
             term: '4 месяца',
             desc: 'Приложение позволяет объединять контент из Twitter, Youtube, ВКонтакте, Instagram на одной странице. Пользователь сам решает как сгруппировать подписки (Развлекательные, Новостные... что угодно)',
             my_work: 'Разработка серверной части полностью была на мне. Все новости сохраняются на нашем сервере. Так как тысячи пользвателей мугут подписатся на один и тот же канал, пришлось пойти на нестандартные решения, чтобы избежать дублей новостей. Это сильно усложнило логику хранения и формирования персонализированных новостных лент но зато существенно сократило количество запросов к API Twitter/Youtube/ВКонтакте/Instagram и уменьшило размер БД. API полность готово и после окончания разработки мобильных приложений под IOS / Android сервис будет запущен.',
-            tags: [1,2,3,7,30,9,31,8,14,13],
+            tags: [1,2,3,32,33,31,7,9,8,14,13],
             api: ['Twitter', 'Instagram', 'Youtube', 'ВКонтакте'],
             parsing: [],
             previews: ['newstabs/1.png', 'newstabs/2.png', 'newstabs/3.png']
@@ -291,23 +296,10 @@ DATA = {
             parsing: [],
             previews: []
         },
-        /*{
-            id: 9,
-            title: 'Freelance Feed',
-            link: null,
-            short_desc: 'Уведомления о новых заказах на основных биржах фриланса.',
-            term: null,
-            desc: 'Уведомления о новых заказах на основных биржах фриланса.',
-            my_work: 'Мной разработана серверная часть приложения и боты.\n',
-            tags: [1,2,7,8,14,30,26,27,17,28,13],
-            api: [],
-            parsing: ['Freelansim.ru', 'FL.ru', 'Weblancer.net'],
-            previews: []
-        },*/
         {
             id: 10,
-            title: 'RegencyProjectManagement.com',
-            link: null,
+            title: 'Regency P.M',
+            link: 'https://regencyprojectmanagement.com',
             short_desc: 'Корпоративный сайт и админ панель.',
             term: null,
             desc: 'Корпокативный сайт и админ панель. Админ панель сделана на Django Admin.',
@@ -316,6 +308,19 @@ DATA = {
             api: [],
             parsing: [],
             previews: ['regency/1.png','regency/2.png','regency/3.png','regency/4.png','regency/5.png','regency/6.png',]
+        },
+        {
+            id: 11,
+            title: 'GO validation package',
+            link: 'https://github.com/qvp/validation',
+            short_desc: 'Пакет для валидации данных с расширенными возможностями.',
+            term: null,
+            desc: 'Пакет для валидации данных с расширенными возможностями.',
+            my_work: 'Проект является open-source. Полностью разработан мной. Было интересно воплатить все свои идеи и создать валидаторы, которые бы отвечали все современным требованиям. Так существующие пакеты меня не удовлетворили было решено создать свой.',
+            tags: [29,13],
+            api: [],
+            parsing: [],
+            previews: []
         },
     ]
 };
