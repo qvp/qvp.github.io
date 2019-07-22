@@ -6,7 +6,6 @@
     <title>Александр Кузьменко | Python программист</title>
     <link rel="icon" type="image/vnd.microsoft.icon" href="v3/favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="js/animatedmodal/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Yandex.Metrika counter -->
@@ -41,7 +40,6 @@
     <!-- /Yandex.Metrika counter -->
 </head>
 <body>
-
     <div id="scroll">
         <div class="corner"></div>
 
@@ -55,21 +53,19 @@
                 <h2 class="font-size-60 font-weight-bold text-center">
                     Программист Python, GO
                 </h2>
-
                 <p class="mt-5">
-                    Занимаюсь серверным программированием на протяжении последних 9 лет. Эта область программирования мне наиболее интересна.
-                    Кроме backend-а некоторое время занимался: frontend-разработкой на JavaScript/Vue.js, созданием IOS приложений на Objective-C/Swift, созданием
-                    2D игр на SpriteKit/Box2D/JS. Но как говорится - все запросы идут на сервер:)
+                    Занимаюсь backend-разработкой на протяжении девяти лет. Мой основной стек Python, Django, PostgreSQL.
+                    <br>
+                    Большинство моих работ - это долгосрочные проекты, которые я делал "с нуля". Это помогло мне получить разносторонний опыт на всех уровнях:
+                    выбирать правильную архитектуру, проектировать базы данных, находить нестандартные решения, разрабатывать собственные библиотеки, доводить проект до "production ready".
+                    Особое внимание уделяю качеству кода. Пишу тесты, документацию.
+                    <br>
+                    В работе использую Docker, linux, Git.
                 </p>
-                <p>
-                    Для меня программирование в первую очередь любимое дело, а уже потом - работа. Поэтому я постоянно в процессе изучения чего-нибудь новенького.
-                    В данный момент осваиваю тонскости разработки на языке программирования GO, а также продолжаю совершенствоваться во владении Python.
-                </p>
-
                 <p>
                     <b class="width135">Примеры кода:</b><img src="css/github.png" class="icon"><a href="https://github.com/qvp" target="_blank">https://github.com/qvp</a>
                     <br>
-                    <b class="width135">Контакты:</b><img src="css/gmail.png" class="icon"><a href="mailto:mail@alexanderkuzmenko.com" class="contact-link">mail@alexanderkuzmenko.com</a>
+                    <b class="width135">Контакты:</b><img src="css/mail.png" class="icon"><a href="mailto:mail@alexanderkuzmenko.com" class="contact-link">mail@alexanderkuzmenko.com</a>
                 </p>
 
                 <!-- Портфолио -->
@@ -79,38 +75,30 @@
                 <div class="mb-5 selectable-badges">
                     <h6>Фильтр по тегу:</h6>
 
-                    <template v-for="group in tagsGrouped">
-                        <span v-for="tag in group.tags"
-                              :class="{active: tag.id === filterByTag}"
-                              class="badge badge-danger badge-skill"
-                              @click="setFilterByTag(tag.id)">{{ tag.title }}</span>
-                        <br>
-                    </template>
+                    <span v-for="tag in db.tags"
+                          :class="{active: tag.id === filterByTag}"
+                          class="badge badge-danger badge-skill"
+                          @click="setFilterByTag(tag.id)">{{ tag.title }}</span>
                 </div>
 
-                <div v-for="(chunk, index) in portfolioChunked" class="row mt-5">
-                    <div class="col-3" v-for="item in chunk">
+                <div class="row mb-10">
+                    <div class="col-md-6 col-lg-4 col-xl-3 mt-5" v-for="item in db.portfolio" v-if="filterByTag===null || item.tags.indexOf(filterByTag) != -1">
                         <h5>{{ item.title }}</h5>
                         <p>{{ item.short_desc }}</p>
-                        <a href="#animatedModal" :data-page="item.id" class="open-modal">Подробнее ...</a>
+                        <a href="javascript:void(0);" @click="setCurrentPage(item.id)" class="open-modal">Подробнее ...</a>
                     </div>
-                </div>
-
-                <!-- HH -->
-                <div class="text-center mt-5 mb-10">
-                    <!--<a href="#" target="_blank" class="btn btn-outline-danger">Смотреть резюме на <b>hh.ru</b></a>-->
                 </div>
             </div>
         </div>
         </div>
 
         <!-- Modal window -->
-        <div id="animatedModal">
-            <div class="close-animatedModal">
-                <div class="float-right">
+        <div id="animatedModal" :class="{'modal-opened': currentPage, 'modal-closed': !currentPage}">
+            <div class="close-animatedModal" v-if="currentPage">
+                <div class="float-right" @click="setCurrentPage(null)">
                     <img src="css/cancel.png">
                 </div>
-                <div>
+                <div @click="setCurrentPage(null)">
                     <img src="css/left-arrow.png"> Назад
                 </div>
             </div>
@@ -165,8 +153,6 @@
     </div>
 
     <script src="js/vue.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/animatedmodal/animatedModal.min.js"></script>
     <script src="js/DATA.js"></script>
     <script src="js/script.js"></script>
 </body>

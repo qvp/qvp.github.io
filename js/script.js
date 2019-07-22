@@ -13,37 +13,18 @@ let app = new Vue({
         filterByTag: null,
         currentPage: null
     },
-    computed: {
-        tagsGrouped() {
-            return this.db.tag_groups.map((g) => {
-                return {
-                    title: g.title,
-                    tags: this.db.tags.filter((t) => {
-                        return t.group === g.id;
-                    })
-                }
-            });
-        },
-        portfolioFiltered() {
-            if (this.filterByTag === null) {
-                return this.db.portfolio;
-            }
-            return this.db.portfolio.filter((item) => {
-                return item.tags.indexOf(this.filterByTag) !== -1;
-            });
-        },
-        portfolioChunked() {
-            let i, j, res = [], chunk = 4;
-            let portfolio = this.portfolioFiltered;
-            for (i = 0, j = portfolio.length; i < j; i += chunk) {
-                res.push(portfolio.slice(i, i + chunk));
-            }
-            return res;
-        }
-    },
     methods: {
         setFilterByTag(tag_id) {
             this.filterByTag = this.filterByTag === tag_id ? null : tag_id;
+        },
+        setCurrentPage(page_id) {
+            this.currentPage = page_id;
+            //location.hash = page_id ? '#' + page_id : '';
+            if (page_id) {
+                location.hash = '#' + page_id;
+            } else {
+                history.replaceState(null, null, ' ');
+            }
         },
         getTagsNames(tags_ids) {
             return tags_ids.map((id) => {
@@ -61,23 +42,13 @@ let app = new Vue({
         }
     },
     mounted() {
-       $(".open-modal").animatedModal({
-           animationDuration: '.7s',
-           beforeOpen: (el) => {
-               app.currentPage = $(el).data('page');
-           },
-           afterClose: () => {
-               document.getElementById('animatedModal').scrollTop = 0;
-           }
-       });
+        if (location.hash.length > 1) {
+            let id = parseInt(location.hash.substr(1));
+            DATA.portfolio.forEach((item) => {
+                if (item.id === id) {
+                    this.setCurrentPage(id);
+                }
+            });
+        }
     }
 });
-
-if (location.hash.length > 1) {
-    let id = location.hash.substr(1);
-    DATA.portfolio.forEach((item) => {
-        if (item.id == id) {
-            $('a[data-page="'+id+'"]').click();
-        }
-    });
-}
