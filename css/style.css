@@ -350,3 +350,7 @@ a, a:hover {
 .modal-content {
     border: none;
 }
+
+.hidden-work {
+    visibility: hidden;
+}

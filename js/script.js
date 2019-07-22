@@ -13,13 +13,23 @@ let app = new Vue({
         filterByTag: null,
         currentPage: null
     },
+    computed: {
+        getFilteredWorks() {
+            if (this.filterByTag === null) {
+                return this.db.portfolio;
+            } else {
+                return this.db.portfolio
+                    .filter(e => e.tags.indexOf(this.filterByTag) !== -1)
+                    .concat(this.db.portfolio.filter(e => e.tags.indexOf(this.filterByTag) === -1))
+            }
+        }
+    },
     methods: {
         setFilterByTag(tag_id) {
             this.filterByTag = this.filterByTag === tag_id ? null : tag_id;
         },
         setCurrentPage(page_id) {
             this.currentPage = page_id;
-            //location.hash = page_id ? '#' + page_id : '';
             if (page_id) {
                 location.hash = '#' + page_id;
             } else {
