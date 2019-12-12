@@ -88,7 +88,7 @@
 
                 <div class="row mb-10">
                     <div class="col-md-6 col-lg-4 col-xl-3 mt-5" :class="{'hidden-work': filterByTag !== null && item.tags.indexOf(filterByTag) === -1}" v-for="item in getFilteredWorks">
-                        <h5>{{ item.title }}</h5>
+                        <h5 v-html="item.title"></h5>
                         <p>{{ item.short_desc }}</p>
                         <a href="javascript:void(0);" @click="setCurrentPage(item.id)" class="open-modal">Подробнее ...</a>
                     </div>

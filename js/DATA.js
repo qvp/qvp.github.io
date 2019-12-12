@@ -147,6 +147,19 @@ DATA = {
             previews: ['newstabs/1.png', 'newstabs/2.png', 'newstabs/3.png']
         },
         {
+            id: 17,
+            title: 'sendmore.ru',
+            link: 'http://sendmore.ru',
+            short_desc: 'Сервис для создания массовых рассылок ВКонтакте.',
+            term: '2 месяца',
+            desc: 'Для нужд СММ агенства был разработан сервис, который позволяет создавать массовые рассылки сообщений Вконтакте.',
+            my_work: 'Сервис полностью разработан мной с нуля. Были созданы инструменты для расширенного поиска контактов, механизмы массовой рассылки, инструменты сбора статистики и аналитики, API для связывания с другими сервисами компании, панель администрирования.',
+            tags: [1,2,3,8],
+            api: ['ВКонтакте'],
+            parsing: [],
+            previews: ['sendmore/1.png', 'sendmore/2.png', 'sendmore/3.png']
+        },
+        {
             id: 4,
             title: 'selfie-store.ru',
             link: null,
@@ -160,8 +173,34 @@ DATA = {
             previews: ['selfiestore/1.png', 'selfiestore/2.png', 'selfiestore/3.png', 'selfiestore/4.png',]
         },
         {
+            id: 10,
+            title: 'Regency P.M',
+            link: 'https://regencyprojectmanagement.com',
+            short_desc: 'Новостной сайт и админ панель.',
+            term: null,
+            desc: 'Корпокативный сайт и админ панель. Админ панель сделана на Django Admin.',
+            my_work: 'Мной разработана серверная часть приложения.\n',
+            tags: [1,2,8],
+            api: [],
+            parsing: [],
+            previews: ['regency/1.png','regency/2.png','regency/3.png','regency/4.png','regency/5.png','regency/6.png',]
+        },
+        {
+            id: 12,
+            title: 'aari.ru',
+            link: 'http://www.aari.ru',
+            short_desc: 'Сайт института и админ панель.',
+            term: null,
+            desc: 'Государственный научный центр "Арктический и антарктический научно-исследовательский институт" - лидер российской полярной науки.\r\n Сайт мультиязычный. Админ панель сделана на Django Admin.',
+            my_work: 'Мной разработана серверная часть приложения.\n',
+            tags: [1,2,8],
+            api: [],
+            parsing: [],
+            previews: ['aari/1.png','aari/2.png', 'empty.png','aari/3.png']
+        },
+        {
             id: 15,
-            title: 'aiochorm',
+            title: '<img src="css/github.png" class="icon">aiochorm',
             link: 'https://github.com/qvp/aiochorm',
             short_desc: 'Асинхронная ORM для ClickHouse.',
             term: null,
@@ -174,7 +213,7 @@ DATA = {
         },
         {
             id: 14,
-            title: 'django-import-csv',
+            title: '<img src="css/github.png" class="icon">django-import-csv',
             link: 'https://github.com/qvp/django-import-csv',
             short_desc: 'Quick import CSV data into database via command line or code.',
             term: null,
@@ -187,7 +226,7 @@ DATA = {
         },
         {
             id: 11,
-            title: 'GO validation package',
+            title: '<img src="css/github.png" class="icon">GO validation package',
             link: 'https://github.com/qvp/validation',
             short_desc: 'Пакет для валидации данных с расширенными возможностями.',
             term: null,
@@ -197,32 +236,6 @@ DATA = {
             api: [],
             parsing: [],
             previews: []
-        },
-        {
-            id: 12,
-            title: 'aari.ru',
-            link: 'http://www.aari.ru',
-            short_desc: 'Арктический и антарктический научно-исследовательский институт',
-            term: null,
-            desc: 'Государственный научный центр "Арктический и антарктический научно-исследовательский институт" - лидер российской полярной науки.\r\n Сайт мультиязычный. Админ панель сделана на Django Admin.',
-            my_work: 'Мной разработана серверная часть приложения.\n',
-            tags: [1,2,8],
-            api: [],
-            parsing: [],
-            previews: ['aari/1.png','aari/2.png', 'empty.png','aari/3.png']
-        },
-        {
-            id: 10,
-            title: 'regencyprojectmanagement.com',
-            link: 'https://regencyprojectmanagement.com',
-            short_desc: 'Корпоративный сайт и админ панель.',
-            term: null,
-            desc: 'Корпокативный сайт и админ панель. Админ панель сделана на Django Admin.',
-            my_work: 'Мной разработана серверная часть приложения.\n',
-            tags: [1,2,8],
-            api: [],
-            parsing: [],
-            previews: ['regency/1.png','regency/2.png','regency/3.png','regency/4.png','regency/5.png','regency/6.png',]
         },
     ]
 };
