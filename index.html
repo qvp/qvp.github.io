@@ -37,16 +37,15 @@
                 </div>
                 <h3 class="mt-3 mb-5 text-center font-size-30">Александр Кузьменко</h3>
                 <h2 class="font-size-60 font-weight-bold text-center">
-                    Программист Python, GO
+                    Python программист
                 </h2>
                 <p class="mt-5">
-                    Занимаюсь backend-разработкой более 8 лет, из которых 4 года на Python и Django. Мой основной стек Python, Django, PostgreSQL.
-                    <br>
+                    Занимаюсь backend-разработкой более 9 лет, из которых 4 года на Python и Django.
                     Большинство моих работ - это долгосрочные проекты, которые я делал "с нуля". Это помогло мне получить разносторонний опыт на всех уровнях:
                     выбирать правильную архитектуру, проектировать базы данных, находить нестандартные решения, разрабатывать собственные библиотеки,
                     доводить проект до "production ready".
                     <br>
-                    Особое внимание уделяю качеству кода. Пишу тесты, документацию.
+                    Особое внимание уделяю качеству кода. Пишу тесты, документацию. Постоянно занимаюсь повышением квалификации.
                     <br>
                     В работе использую Docker, linux, Git.
                 </p>
@@ -66,6 +65,7 @@
                     <h6>Фильтр по тегу:</h6>
 
                     <span v-for="tag in db.tags"
+                          v-if="tag.filter"
                           :class="{active: tag.id === filterByTag}"
                           class="badge badge-danger badge-skill"
                           @click="setFilterByTag(tag.id)">{{ tag.title }}</span>
@@ -98,10 +98,10 @@
                         <div class="row">
                             <div class="col-12 work-margin-top">
                                 <h5 class="work-title">
-                                    <a target="_blank" :href="item.link">{{ item.title }}</a>
+                                    <a target="_blank" :href="item.link" v-html="item.title"></a>
                                     <span class="work-date" v-if="item.term">(срок {{ item.term }})</span>
                                 </h5>
-                                <p>{{ item.desc }}</p>
+                                <p class="pre-line" v-html="item.desc"></p>
 
                                 <h6 v-if="item.link">Ссылка</h6>
                                 <a :href="item.link" class="open-modal" target="_blank" v-if="item.link">{{ item.link }}</a>

@@ -6,7 +6,7 @@ DATA.portfolio.map((item) => {
     });
 });
 
-let app = new Vue({
+new Vue({
     el: '#scroll',
     data: {
         db: DATA,
@@ -51,6 +51,16 @@ let app = new Vue({
             return res;
         }
     },
+    watch: {
+        currentPage: function (_new, old) {
+            let body = document.getElementsByTagName("body")[0];
+            if (_new === null) {
+                body.style.overflowY = 'scroll';
+            } else {
+                body.style.overflowY = 'hidden';
+            }
+        }
+  },
     mounted() {
         if (location.hash.length > 1) {
             let id = parseInt(location.hash.substr(1));
