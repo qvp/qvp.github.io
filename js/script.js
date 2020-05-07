@@ -72,3 +72,12 @@ new Vue({
         }
     }
 });
+
+function md_decryption() {
+    let adjective = DATA.adjectives[Math.floor(Math.random() * DATA.adjectives.length)];
+    let noun = DATA.nouns[Math.floor(Math.random() * DATA.nouns.length)];
+    let title = '.MD отзначает ' + adjective + ' ' + noun + ' а не Молдавия :)';
+    document.getElementById('site').title = title;
+}
+
+document.getElementById('site').onmouseenter = md_decryption

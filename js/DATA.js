@@ -102,7 +102,7 @@ DATA = {
             title: 'API Manager',
             link: null,
             short_desc: 'B2B сервис для предоставления платного доступа к различным API компании.',
-            term: '4 месяца',
+            term: '6 месяцев',
             desc: 'B2B сервис для предоставления платного доступа к различным API компании.\n'
                 +' Проект выполнен для "Национальная инжиниринговая корпорация (https://nekor.ru)".',
             my_work: 'Мной разработана серверная часть проекта с нуля. Проект состоит из панели администрирования, личного кабинета клиента и прокси сервиса для запросов к платным API.' +
@@ -265,5 +265,10 @@ DATA = {
             parsing: [],
             previews: []
         },
-    ]
+    ],
+    adjectives: ['machiavellian', 'mad', 'magnanimous', 'materialistic', 'martial', 'manipulative', 'majestic',
+        'mature', 'maverick', 'meritorious', 'memorable', 'meticulous', 'miraculous', 'mirthful', 'monumental',
+        'munificent', 'mystifying', 'marvelous', 'marvellous', 'modern'],
+    nouns: ['developer', 'dancer', 'dark', 'daylight', 'deadline', 'dog', 'decorator', 'defender', 'demeanor',
+        'demon', 'deployment', 'design', 'destiny', 'destroyer', 'devil', 'driver', 'duck', 'dynamite']
 };

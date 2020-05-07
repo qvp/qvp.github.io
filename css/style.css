@@ -1,8 +1,7 @@
 body {
-    padding-top: 318px;
+    padding-top: 400px;
     background: rgb(0, 9, 12) url("bg_light.jpg") top left no-repeat fixed;
-    background-position-y: -233px;
-
+    background-position-y: -194px;
 }
 
 #scroll {
@@ -217,7 +216,7 @@ a, a:hover {
 }
 
 .icon {
-    padding-right: 5px;
+    padding-right: 2px;
     width: 21px;
     height: auto;
 }
@@ -355,4 +354,13 @@ a, a:hover {
 
 .hidden-work {
     visibility: hidden;
+}
+
+#site {
+    font-family: 'Poppins', sans-serif;
+}
+
+#site span {
+    color: #ec1212;
+    font-size: 16px;
 }
