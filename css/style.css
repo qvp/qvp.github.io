@@ -361,6 +361,9 @@ a, a:hover {
 }
 
 #site span {
-    color: dodgerblue;
     font-size: 16px;
+}
+
+.text-dodgerblue {
+    color: dodgerblue !important;
 }
