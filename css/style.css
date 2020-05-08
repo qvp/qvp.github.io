@@ -378,7 +378,7 @@ a, a:hover {
 .preview-wrapper img {
     width: 100%;
     height: auto;
-    filter: blur(0.5px);
+    filter: grayscale(70%);
 }
 
 #preview-3 {
