@@ -2,103 +2,76 @@ DATA = {
     tags: [
         {
             id: 1,
-            title: 'Python',
-            filter: true
+            title: 'Python'
         },
         {
             id: 2,
-            title: 'Django',
-            filter: true
+            title: 'Django'
         },
         {
             id: 4,
-            title: 'aiohttp',
-            filter: true
+            title: 'aiohttp'
         },
         {
             id: 38,
-            title: 'Flask',
-            filter: true
+            title: 'Flask'
         },
         {
             id: 3,
-            title: 'Django REST framework',
-            filter: true
+            title: 'Django REST framework'
         },
         {
             id: 32,
-            title: 'Celery',
-            filter: true
+            title: 'Celery'
         },
         {
             id: 33,
-            title: 'Django Channels',
-            filter: true
+            title: 'Django Channels'
         },
         {
             id: 8,
-            title: 'PostgreSQL',
-            filter: true
+            title: 'PostgreSQL'
         },
         {
             id: 34,
-            title: 'ClickHouse',
-            filter: true
+            title: 'ClickHouse'
         },
         {
             id: 36,
-            title: 'RabbitMQ',
-            filter: true
+            title: 'RabbitMQ'
         },
         {
             id: 9,
-            title: 'Redis',
-            filter: true
+            title: 'Redis'
         },
         {
             id: 40,
-            title: 'asyncio',
-            filter: false
+            title: 'asyncio'
         },
         {
             id: 39,
-            title: 'Scrapy',
-            filter: false
+            title: 'Scrapy'
         },
         {
             id: 37,
-            title: 'Микросервисная архитектура',
-            filter: true
-        },
-        {
-            id: 35,
-            title: 'Open Source',
-            filter: true
-        },
-        {
-            id: 29,
-            title: 'GO',
-            filter: true
+            title: 'Микросервисная архитектура'
         },
         {
             id: 41,
-            title: 'unittest',
-            filter: false
+            title: 'unittest'
         },
         {
             id: 42,
-            title: 'pytest',
-            filter: false
+            title: 'pytest'
         },
         {
             id: 43,
-            title: 'Docker',
-            filter: false
+            title: 'Docker'
         },
     ],
-    portfolio: [
+    bestWorks: [
         {
-            id: 18,
+            id: 1,
             title: 'API Manager',
             link: null,
             short_desc: 'B2B сервис для предоставления платного доступа к различным API компании.',
@@ -119,39 +92,14 @@ DATA = {
             tags: [1,2,3,4,8,34,9,36,37,43,41,42],
             api: [],
             parsing: [],
+            preview: 'apimanager/1.png',
             previews: ['apimanager/1.png', 'apimanager/2.png', 'apimanager/3.png', 'apimanager/4.png', 'apimanager/5.png', 'apimanager/6.png']
         },
         {
-            id: 16,
-            title: 'agora.ru',
-            link: 'https://www.agora.ru',
-            short_desc: 'B2B платформа для электронной коммерции.',
-            term: null,
-            desc: 'AGORA — мощная B2B платформа, более чем с 200 модулями для автоматизации бизнес-процессов.',
-            my_work: 'Разрабатывал новые модули для платформы. Для некоторых задач, например таких как импортирование информации о товарах, использовал celery. Работал в команде, в качестве сотрудника компании. Более подробно описать разработанный функционал и показать скриншоты не могу, так как это запрещают условия NDA.',
-            tags: [1,2,8,32],
-            api: [],
-            parsing: [],
-            previews: []
-        },
-        {
-            id: 13,
-            title: 'Atom Secure',
-            link: null,
-            short_desc: 'Система управления логами, отслеживания угроз и атак на серверах.',
-            term: null,
-            desc: 'Приложение позволяет просматривать и управлять логами от различных систем. Отслеживать угрозы и атаки на эти системы.',
-            my_work: 'Мной сделана система поиска логов и доставки их в реальном времени на ClickHouse и Channels. А так же работал над другими компонентами системы. Разработана aiochorm - асинхронная версия clickhouse_orm, данная библиотека выложена на github.',
-            tags: [1,2,34,8,33,9],
-            api: ['ATT&CK MITRE'],
-            parsing: [],
-            previews: ['atom/1.png', 'atom/2.png', 'atom/3.png']
-        },
-        {
-            id: 3,
-            title: 'astrologiko.com',
+            id: 2,
+            title: 'Astrologiko',
             link: 'https://astrologiko.com',
-            short_desc: 'Ваш персональный гороскоп и консультации с астрологом в реальном времени.',
+            short_desc: 'Ваш персональный гороскоп и чат с астрологом в реальном времени.',
             term: '7 месяцев',
             desc: 'Astrologiko - это сервис персонализированных гороскопов и возможности общаться с астрологом онлайн. Основа сервиса - анализ вашей карты планет научной программой. На основе личных данных (дата, место и время рождения) формируется персональный гороскоп, рисуется натальная карта на каждый день и многое другое.',
             my_work: 'Проект полностью разработан мной (клиент и сервер). В этом проекте было много работы с данными. На основе информации о пользователе для него расчитывалось положение планет и и другая астрологическая информация. На основе этих данных строится ежедневный гороскоп и отрисовывается карта планет. Для этого было разработанно и покрыто тестами несколько библиотек. Из за ресурсоемкости был введен механизм распределения задач в очереди. Кроме астрологических вычислений было много более обыденных задач:\n' +
@@ -165,13 +113,14 @@ DATA = {
             tags: [1,2,3,8,33],
             api: ['CloudPayments', 'Dreamkas', 'Gmail', 'Яндекс Почта', 'Mail.ru', 'Vkontakte', 'Facebook', 'Odnoklassniki'],
             parsing: ['Таблицы координат планет', 'Несколько астрологических сайтов'],
+            preview: 'astrologiko/1.png',
             previews: ['astrologiko/1.png','astrologiko/2.png','astrologiko/3.png','astrologiko/4.png','astrologiko/5.png','astrologiko/6.png','astrologiko/7.png','astrologiko/8.png','astrologiko/9.png',]
         },
         {
-            id: 2,
-            title: 'wikiitem.com',
+            id: 3,
+            title: 'WikiItem',
             link: 'http://wikiitem.com',
-            short_desc: 'Аналог Яндекс.Маркет. Место, где покупатели и продавцы могут найти друг друга! Редактирование товаров работает по приципу Wiki',
+            short_desc: 'Аналог Яндекс.Маркет. Место, где покупатели и продавцы могут найти друг друга.',
             term: '1 год и 2 месяца',
             desc: 'Торговая площадка, в которой любой желающий может создать собственный магазин. База насчитывает более 550 000 товаров, которые можно продавать в своем магазине. ' +
                 'Свои товары можно загрузить через REST API или добавить вручную, через конструктор. Конструктор помогает быстро добавлять товары, он автоматически ищет и предлагает изображения, видео обзоры. ' +
@@ -185,85 +134,39 @@ DATA = {
             tags: [1,2,38,8,37,39,41,43],
             api: ['Ebay', 'Amazon', 'Aliexpress', 'YouTube', 'Яндекс Маркет'],
             parsing: ['Google Images', 'Яндекс Маркет', 'Amazon Products'],
+            preview: 'wikiitem/1.png',
             previews: ['wikiitem/1.png', 'wikiitem/2.png']
         },
         {
-            id: 17,
-            title: 'sendmore.ru',
-            link: 'https://sendmore.ru',
-            short_desc: 'Сервис для создания массовых рассылок ВКонтакте.',
-            term: '2 месяца',
-            desc: 'Сервис для создания массовых рассылок ВКонтакте. Разработан для нужд рекламного агенства, занимающегося продвижением групп ВКонтакте.',
-            my_work: 'Сервис разработан мной с нуля. Были созданы инструменты для расширенного поиска контактов, механизмы массовой рассылки, инструменты сбора статистики и аналитики, API для связывания с другими сервисами компании, панель администрирования.',
-            tags: [1,2,3,8,41,43],
-            api: ['ВКонтакте'],
-            parsing: [],
-            previews: ['sendmore/1.png', 'sendmore/2.png', 'sendmore/3.png']
-        },
-        {
-            id: 1,
-            title: 'News Tabs',
+            id: 4,
+            title: 'Atom Secure',
             link: null,
-            short_desc: 'Агрегатор новостей из социальных сетей с возможностью разделять каналы по вкладкам.',
+            short_desc: 'Система управления логами, отслеживания угроз и атак на серверах.',
             term: null,
-            desc: 'Мобильное приложение для просмотра новостей из различных источников. Новости сгруппированы по темам в отдельных вкладках.',
-            my_work: 'Мной разработана серверная часть проекта. Celery использовался для фоновой загрузки и обработки новостей. Django Channels для доставки новых новостей без обновления вкладок по протоколу websocket.',
-            tags: [1,2,3,32,33,39,41,8,43],
-            api: [],
+            desc: 'Приложение позволяет просматривать и управлять логами от различных систем. Отслеживать угрозы и атаки на эти системы.',
+            my_work: 'Мной сделана система поиска логов и доставки их в реальном времени на ClickHouse и Channels. А так же работал над другими компонентами системы. Разработана aiochorm - асинхронная версия clickhouse_orm, данная библиотека выложена на github.',
+            tags: [1,2,34,8,33,9],
+            api: ['ATT&CK MITRE'],
             parsing: [],
-            previews: ['newstabs/1.png', 'newstabs/2.png', 'newstabs/3.png']
-        },
+            preview: 'atom/2.png',
+            previews: ['atom/1.png', 'atom/2.png', 'atom/3.png']
+        }
+    ],
+    openSource: [
         {
-            id: 10,
-            title: 'regencyprojectmanagement.com',
-            link: 'https://regencyprojectmanagement.com',
-            short_desc: 'Сайт компании с различными типами контента и админ панель.',
-            term: null,
-            desc: 'Сайт компании с различными типами контента и админ панель. Админ панель сделана на Django Admin.',
-            my_work: 'Мной разработана серверная часть проекта.\n',
-            tags: [1,2,8,43],
-            api: [],
-            parsing: [],
-            previews: ['regency/1.png','regency/2.png','regency/3.png','regency/4.png','regency/5.png','regency/6.png',]
-        },
-        {
-            id: 15,
-            title: '<img src="css/github.png" class="icon">aiochorm',
+            title: 'aiochorm',
             link: 'https://github.com/qvp/aiochorm',
             short_desc: 'Асинхронная ORM для ClickHouse.',
-            term: null,
-            desc: 'Асинхронная ORM для ClickHouse основанная на clickhouse_orm и aioch.',
-            my_work: 'Для проекта Atom Secure потребовалось работать с ClickHouse в асинхронном виде. Готовой асинхронной ORM не было поэтому взял за основу clickhouse_orm и переписал ту ее часть, которая касаеться запросов к БД. Познее добавил недостающие функции и выложил в открытый доступ.',
-            tags: [1,34,35],
-            api: [],
-            parsing: [],
-            previews: [],
         },
         {
-            id: 14,
-            title: '<img src="css/github.png" class="icon">django-import-csv',
+            title: 'django-import-csv',
             link: 'https://github.com/qvp/django-import-csv',
-            short_desc: 'Quick import CSV data into database via command line or code.',
-            term: null,
-            desc: 'Django package for quick import CSV data into database via command line or code.',
-            my_work: 'Изначально расширение было разработано для одного из рабочих проектов, в котором было много задач по импортированию разнообразных CSV-файлов. Оно хорошо себя зарекомендовало поэтому решил выложить его исходный код.',
-            tags: [1,2,35],
-            api: [],
-            parsing: [],
-            previews: [],
+            short_desc: 'Быстрый импорт CSV-дфнных в базуд анных через командную строку или код.',
         },
         {
-            id: 11,
-            title: '<img src="css/github.png" class="icon">GO validation package',
+            title: 'GO validation package',
             link: 'https://github.com/qvp/validation',
             short_desc: 'Пакет для валидации данных с расширенными возможностями.',
-            term: null,
-            desc: 'Пакет для валидации данных с расширенными возможностями.',
-            my_work: 'Проект является open-source. Полностью разработан мной. Было интересно воплатить все свои идеи и создать валидаторы, которые бы отвечали все современным требованиям. Так существующие пакеты меня не удовлетворили было решено создать свой.',
-            tags: [29,35],
-            api: [],
-            parsing: [],
-            previews: []
         },
     ],
     adjectives: ['machiavellian', 'mad', 'magnanimous', 'materialistic', 'martial', 'manipulative', 'majestic',

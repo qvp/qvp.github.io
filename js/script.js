@@ -1,4 +1,4 @@
-DATA.portfolio.map((item) => {
+DATA.bestWorks.map((item) => {
     return item.previews.map((src) => {
         let image = new Image();
         image.src = 'previews/' + src;
@@ -10,24 +10,9 @@ new Vue({
     el: '#scroll',
     data: {
         db: DATA,
-        filterByTag: null,
         currentPage: null
     },
-    computed: {
-        getFilteredWorks() {
-            if (this.filterByTag === null) {
-                return this.db.portfolio;
-            } else {
-                return this.db.portfolio
-                    .filter(e => e.tags.indexOf(this.filterByTag) !== -1)
-                    .concat(this.db.portfolio.filter(e => e.tags.indexOf(this.filterByTag) === -1))
-            }
-        }
-    },
     methods: {
-        setFilterByTag(tag_id) {
-            this.filterByTag = this.filterByTag === tag_id ? null : tag_id;
-        },
         setCurrentPage(page_id) {
             this.currentPage = page_id;
             if (page_id) {
@@ -64,7 +49,7 @@ new Vue({
     mounted() {
         if (location.hash.length > 1) {
             let id = parseInt(location.hash.substr(1));
-            DATA.portfolio.forEach((item) => {
+            this.db.bestWorks.forEach((item) => {
                 if (item.id === id) {
                     this.setCurrentPage(id);
                 }

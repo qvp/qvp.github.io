@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="yandex-verification" content="cd07e16df7492215" />
-    <meta name='freelancehunt' content='1a8873c994e2dca' />
-    <title>Александр Кузьменко | Python программист</title>
+    <title>Александр - Python программист</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -53,50 +52,50 @@
                 <div id="ava">
                     <img src="css/me.png">
                 </div>
-                <h3 class="mt-3 mb-5 text-center font-size-30">Александр Кузьменко</h3>
-                <h2 class="font-size-60 font-weight-bold text-center">
-                    Python программист
-                </h2>
                 <p class="mt-5">
-                    Занимаюсь backend-разработкой 9 лет, из которых более 4 лет на Python и Django.
+                    Меня зовут Александр, мне 29. Занимаюсь backend-разработкой 10 лет, из которых последние 5 лет на Python.
                     Большинство моих работ - это долгосрочные проекты, которые я делал "с нуля". Это помогло мне получить разносторонний опыт на всех уровнях:
                     выбирать правильную архитектуру, проектировать базы данных, находить нестандартные решения, разрабатывать собственные библиотеки,
-                    доводить проект до "production ready".
-                    <br>
-                    Особое внимание уделяю качеству кода. Пишу тесты, документацию. Постоянно занимаюсь повышением квалификации.
+                    доводить проект до "production ready". Особое внимание уделяю качеству кода. Пишу тесты, документацию. Постоянно занимаюсь повышением квалификации.
                     <br>
                     <br>
-                    <span class="text-dodgerblue">Отлично знаю</span> <i>(отлично знаю теорию, много применял на практике):</i>
+                    <b>Отлично знаю</b> <i>(отлично знаю теорию, много применял на практике):</i>
                     <br>
                     Python, Django, DRF, Postgres, SQL, ООП, Тестирование, Качество кода (SOLID, DRY, KISS, и.т.д), Асинхронное программирование,
                     <br>
                     aiohttp, Celery, Redis, Docker, Unix
                     <br>
                     <br>
-                    <span class="text-dodgerblue">Неплохо разбираюсь</span> <i>(хорошо знаю теорию, несколько раз применял на практике):</i>
+                    <b>Неплохо разбираюсь</b> <i>(хорошо знаю теорию, несколько раз применял на практике):</i>
                     <br>
                     RabbitMQ, ClickHouse, Многопоточность, Многопроцессорность, Golang, Микросервисная архитектура
                 </p>
 
-                <!-- Портфолио -->
-                <div class="delimiter mt-5 mb-5">
-                    <div><span>Некоторые мои работы</span></div>
+                <div class="delimiter mt-5">
+                    <div><span>Лучшие работы</span></div>
                 </div>
-                <div class="mb-5 selectable-badges">
-                    <h6>Фильтр по тегу:</h6>
-
-                    <span v-for="tag in db.tags"
-                          v-if="tag.filter"
-                          :class="{active: tag.id === filterByTag}"
-                          class="badge badge-danger badge-skill"
-                          @click="setFilterByTag(tag.id)">{{ tag.title }}</span>
-                </div>
-
-                <div class="row mb-10">
-                    <div class="col-md-6 col-lg-4 col-xl-3 mt-5" :class="{'hidden-work': filterByTag !== null && item.tags.indexOf(filterByTag) === -1}" v-for="item in getFilteredWorks">
-                        <h5 v-html="item.title"></h5>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 col-xl-3 mt-5" v-for="(item, index) in db.bestWorks">
+                        <div class="preview-wrapper">
+                            <img :src="'previews/' + item.preview" :id="'preview-' + index">
+                        </div>
+                        <h5 class="mt-3" v-html="item.title"></h5>
                         <p>{{ item.short_desc }}</p>
                         <a href="javascript:void(0);" @click="setCurrentPage(item.id)" class="open-modal">Подробнее ...</a>
+                    </div>
+                </div>
+
+                <div class="delimiter mt-10">
+                    <div><span>Open Source</span></div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-4 col-xl-3 mt-5" v-for="item in db.openSource">
+                        <h5>
+                            <img src="css/github.png" class="icon">
+                            <span>{{ item.title}}</span>
+                        </h5>
+                        <p>{{ item.short_desc }}</p>
+                        <a target="_blank" :href="item.link" class="open-modal">Перейти ...</a>
                     </div>
                 </div>
             </div>
@@ -114,7 +113,7 @@
                 </div>
             </div>
             <div class="modal-content">
-                <template v-for="item in db.portfolio" v-if="item.id === currentPage">
+                <template v-for="item in db.bestWorks" v-if="item.id === currentPage">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 work-margin-top">
