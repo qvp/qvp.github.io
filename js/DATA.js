@@ -272,7 +272,7 @@ DATA_EN.bestWorks[2].my_work = 'The project is completely developed by me. In ad
     + '- Microservice for parsing and processing goods before uploading to the main site. Built on Flask + Scrapy. \n'
     + '- Microservice working on the product page - loads offers on the selected product from Ebay. Built on Flask + Ebay API. \n'
     + '- Microservice working on the product page - loads offers on the selected product from Aliexpress. Built on Flask + Aliexpress API. \n'
-                '- Microservice working in the product editor - searches for images in Google images by product name and offers options for download. Built on Node.js + Phantom.js \ n ';
+    + '- Microservice working in the product editor - searches for images in Google images by product name and offers options for download. Built on Node.js + Phantom.js \ n ';
 
 // Translate work 'Atom Secure'
 DATA_EN.bestWorks[3].short_desc = 'A system for managing logs, tracking threats and attacks on servers.';
