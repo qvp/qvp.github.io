@@ -384,3 +384,17 @@ a, a:hover {
 #preview-3 {
     width: 140%;
 }
+
+.pagination {
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+.page-link {
+    padding: 1px 5px 5px 5px;
+}
+
+.page-link img {
+    width: 16px;
+    height: auto;
+}

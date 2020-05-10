@@ -26,24 +26,43 @@
     <!-- /Yandex.Metrika counter -->
 </head>
 <body>
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a id="site" class="navbar-brand" href="/">alex.<span class="text-dodgerblue">MD</span></a>
-        <ul class="navbar-nav mr-auto"></ul>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" target="_blank" href="https://github.com/qvp"><img src="css/github.png" class="icon">Примеры кода</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/александр-3bb97a125/"><img src="css/in.png" class="icon">Резюме</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="mailto:mail@alex.md"><img src="css/mail.png" class="icon">mail@alex.md</a>
-            </li>
-        </ul>
-    </div>
-</nav>
     <div id="scroll">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a id="site" class="navbar-brand" href="/">alex.<span class="text-dodgerblue">MD</span></a>
+                <ul class="navbar-nav mr-auto"></ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://github.com/qvp">
+                            <img src="css/github.png" class="icon">
+                            <span>{{ db.trans.code_examples }}</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/александр-3bb97a125/">
+                            <img src="css/in.png" class="icon">
+                            <span>{{ db.trans.resume }}</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:mail@alex.md"><img src="css/mail.png" class="icon">mail@alex.md</a>
+                    </li>
+                </ul>
+                <ul class="pagination">
+                    <li :class="{'page-item': true, active: lang === 'ru'}">
+                        <a class="page-link" @click="switchLang('ru')" title="Русский">
+                            <img src="css/ru.png">
+                        </a>
+                    </li>
+                    <li :class="{'page-item': true, active: lang === 'en'}">
+                        <a class="page-link" @click="switchLang('en')" title="English">
+                            <img src="css/uk.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
         <div class="corner"></div>
 
         <div class="container">
@@ -52,27 +71,12 @@
                 <div id="ava">
                     <img src="css/me.png">
                 </div>
-                <p class="mt-5">
-                    Меня зовут Александр, мне 29. Занимаюсь backend-разработкой 10 лет, из которых последние 5 лет на Python.
-                    Большинство моих работ - это долгосрочные проекты, которые я делал "с нуля". Это помогло мне получить разносторонний опыт на всех уровнях:
-                    выбирать правильную архитектуру, проектировать базы данных, находить нестандартные решения, разрабатывать собственные библиотеки,
-                    доводить проект до "production ready". Особое внимание уделяю качеству кода. Пишу тесты, документацию. Постоянно занимаюсь повышением квалификации.
-                    <br>
-                    <br>
-                    <b>Отлично знаю</b> <i>(отлично знаю теорию, много применял на практике):</i>
-                    <br>
-                    Python, Django, DRF, Postgres, SQL, ООП, Тестирование, Качество кода (SOLID, DRY, KISS, и.т.д), Асинхронное программирование,
-                    <br>
-                    aiohttp, Celery, Redis, Docker, Unix
-                    <br>
-                    <br>
-                    <b>Неплохо разбираюсь</b> <i>(хорошо знаю теорию, несколько раз применял на практике):</i>
-                    <br>
-                    RabbitMQ, ClickHouse, Многопоточность, Многопроцессорность, Golang, Микросервисная архитектура
-                </p>
+                <p class="mt-5" v-html="db.desc"></p>
 
                 <div class="delimiter mt-5">
-                    <div><span>Лучшие работы</span></div>
+                    <div>
+                        <span>{{ db.trans.best_works }}</span>
+                    </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-md-6 col-lg-4 col-xl-3 mt-5" v-for="(item, index) in db.bestWorks">
@@ -81,7 +85,7 @@
                         </div>
                         <h5 class="mt-3" v-html="item.title"></h5>
                         <p>{{ item.short_desc }}</p>
-                        <a href="javascript:void(0);" @click="setCurrentPage(item.id)" class="open-modal">Подробнее ...</a>
+                        <a href="javascript:void(0);" @click="setCurrentPage(item.id)" class="open-modal">{{ db.trans.read_more }}</a>
                     </div>
                 </div>
 
@@ -95,7 +99,7 @@
                             <span>{{ item.title}}</span>
                         </h5>
                         <p>{{ item.short_desc }}</p>
-                        <a target="_blank" :href="item.link" class="open-modal">Перейти ...</a>
+                        <a target="_blank" :href="item.link" class="open-modal">{{ db.trans.go_over }}</a>
                     </div>
                 </div>
             </div>
@@ -109,7 +113,7 @@
                     <img src="css/cancel.png">
                 </div>
                 <div @click="setCurrentPage(null)">
-                    <img src="css/left-arrow.png"> Назад
+                    <img src="css/left-arrow.png"> {{ db.trans.back }}
                 </div>
             </div>
             <div class="modal-content">
@@ -119,25 +123,25 @@
                             <div class="col-12 work-margin-top">
                                 <h5 class="work-title">
                                     <a target="_blank" :href="item.link" v-html="item.title"></a>
-                                    <span class="work-date" v-if="item.term">(срок {{ item.term }})</span>
+                                    <span class="work-date" v-if="item.term">({{ db.trans.term }} {{ item.term }})</span>
                                 </h5>
                                 <p class="pre-line" v-html="item.desc"></p>
 
-                                <h6 v-if="item.link">Ссылка</h6>
+                                <h6 v-if="item.link">{{ db.trans.link }}</h6>
                                 <a :href="item.link" class="open-modal" target="_blank" v-if="item.link">{{ item.link }}</a>
 
-                                <h6 class="margin-top-40">Мое участие:</h6>
+                                <h6 class="margin-top-40">{{ db.trans.my_participation }}:</h6>
                                 <p class="pre-line" v-html="item.my_work"></p>
 
-                                <h6>Использовал технологии:</h6>
+                                <h6>{{ db.trans.used_technologies }}:</h6>
                                 <p>
                                     <span v-for="tag in getTagsNames(item.tags)" class="badge badge-danger badge-skill">{{ tag }}</span>
                                 </p>
 
-                                <h6 v-if="item.api.length">Интегрировал API:</h6>
+                                <h6 v-if="item.api.length">{{ db.trans.api_integrations }}:</h6>
                                 <p>{{ item.api.join(', ') }}</p>
 
-                                <h6 v-if="item.parsing.length">Парсинг данных:</h6>
+                                <h6 v-if="item.parsing.length">{{ db.trans.data_parsing }}:</h6>
                                 <p>{{ item.parsing.join(', ') }}</p>
 
                             </div>

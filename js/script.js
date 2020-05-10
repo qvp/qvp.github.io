@@ -1,4 +1,8 @@
-DATA.bestWorks.map((item) => {
+let browserLang = navigator.language.toLowerCase().includes('ru') ? 'ru' : 'en';
+let userLang = localStorage.getItem('lang');
+let lang = userLang || browserLang;
+
+DATA[lang].bestWorks.map((item) => {
     return item.previews.map((src) => {
         let image = new Image();
         image.src = 'previews/' + src;
@@ -6,11 +10,12 @@ DATA.bestWorks.map((item) => {
     });
 });
 
-new Vue({
+let app = new Vue({
     el: '#scroll',
     data: {
-        db: DATA,
-        currentPage: null
+        db: DATA[lang],
+        currentPage: null,
+        lang: lang
     },
     methods: {
         setCurrentPage(page_id) {
@@ -34,6 +39,11 @@ new Vue({
                 res.push(images[i]);
             }
             return res;
+        },
+        switchLang(lang) {
+            localStorage.setItem('lang', lang);
+            this.lang = lang;
+            this.db = DATA[lang];
         }
     },
     watch: {
@@ -59,10 +69,14 @@ new Vue({
 });
 
 function md_decryption() {
-    let adjective = DATA.adjectives[Math.floor(Math.random() * DATA.adjectives.length)];
-    let noun = DATA.nouns[Math.floor(Math.random() * DATA.nouns.length)];
-    let title = '.MD отзначает ' + adjective + ' ' + noun + ' а не Молдавия :)';
-    document.getElementById('site').title = title;
+    let adjective = app.db.adjectives[Math.floor(Math.random() * app.db.adjectives.length)];
+    let noun = app.db.nouns[Math.floor(Math.random() * app.db.nouns.length)];
+    if (app.lang === 'ru') {
+        var msg = '.MD отзначает ' + adjective + ' ' + noun + ' а не Молдавия :)';
+    } else {
+        var msg = '.MD means ' + adjective + ' ' + noun + ' and not Moldova :)';
+    }
+    document.getElementById('site').title = msg;
 }
 
 document.getElementById('site').onmouseenter = md_decryption
