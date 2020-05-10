@@ -213,7 +213,7 @@ DATA_EN = JSON.parse(JSON.stringify(DATA_RU))
 DATA_EN.tags[13].title = 'Microservice architecture'
 
 // Translate main description
-DATA_EN.desc = 'My name is Alexander, I\'m 29. I have been working as a backend developer for 10 years, of which the ' +
+DATA_EN.desc = 'My name is Alexander, I\'m 29, I\'m from Russia. I have been working as a backend developer for 10 years, of which the ' +
     'last 5 years have been in Python. Most of my work is a long-term project that I did from scratch. ' +
     'This helped me gain versatile experience at all levels: choose the right architecture, design databases, ' +
     'find custom solutions, develop my own libraries, bring the project to production ready. I pay special ' +
