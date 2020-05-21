@@ -175,11 +175,6 @@ DATA_RU = {
             short_desc: 'Асинхронная ORM для ClickHouse.',
         },
         {
-            title: 'django-import-csv',
-            link: 'https://github.com/qvp/django-import-csv',
-            short_desc: 'Быстрый импорт CSV-дфнных в базуд анных через командную строку или код.',
-        },
-        {
             title: 'GO validation package',
             link: 'https://github.com/qvp/validation',
             short_desc: 'Пакет для валидации данных с расширенными возможностями.',
@@ -281,8 +276,7 @@ DATA_EN.bestWorks[3].my_work = 'I made a system for searching logs and deliverin
 
 // Translate open source projects
 DATA_EN.openSource[0].short_desc = 'Asynchronous ORM for ClickHouse.';
-DATA_EN.openSource[1].short_desc = 'Fast import of CSV data into the database via command line or code.';
-DATA_EN.openSource[2].short_desc = 'A package for validating data with advanced features.';
+DATA_EN.openSource[1].short_desc = 'A package for validating data with advanced features.';
 
 // Trans UI
 DATA_EN.trans = {
