@@ -91,7 +91,7 @@ DATA_RU = {
             title: 'API Manager',
             link: null,
             short_desc: 'B2B сервис для предоставления платного доступа к различным API компании.',
-            term: '6 месяцев',
+            term: '7 месяцев',
             desc: 'B2B сервис для предоставления платного доступа к различным API компании.\n'
                 +' Проект выполнен для "Национальная инжиниринговая корпорация (https://nekor.ru)".',
             my_work: 'Мной разработана серверная часть проекта с нуля. Проект состоит из панели администрирования, личного кабинета клиента и прокси сервиса для запросов к платным API.' +
@@ -228,7 +228,7 @@ DATA_EN.desc = 'My name is Alexander, I\'m 29, I\'m from Russia. I have been wor
 
 // Translate work 'API Manager'
 DATA_EN.bestWorks[0].short_desc = 'B2B service for providing paid access to various company APIs.';
-DATA_EN.bestWorks[0].term = '6 months';
+DATA_EN.bestWorks[0].term = '7 months';
 DATA_EN.bestWorks[0].desc = 'B2B service for providing paid access to various company APIs. The project has been completed for the National Engineering Corporation (https://nekor.ru).';
 DATA_EN.bestWorks[0].my_work = 'I developed the server part of the project from scratch. The project consists of an administration panel, a personal account of the client and a proxy service for requests to paid APIs. '
     + 'The architecture is built in the form of separate, weakly interconnected microservices in order to better scale the proxy service and cope with the loads. '
