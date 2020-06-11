@@ -91,8 +91,8 @@ DATA_RU = {
             title: 'API Manager',
             link: null,
             short_desc: 'B2B сервис для предоставления платного доступа к различным API компании.',
-            term: '6 месяцев',
-            desc: 'B2B сервис для предоставления платного доступа к различным API компании.\n'
+            term: '7 месяцев',
+            desc: 'B2B сервис для предоставления платного доступа к различным API компании.\nСистема предназначена для автоматизации процесса предоставления доступа к API-сервисам, хранения и ведения документации, а также мониторинга состояния работы API-сервисов в реальном времени.'
                 +' Проект выполнен для "Национальная инжиниринговая корпорация (https://nekor.ru)".',
             my_work: 'Мной разработана серверная часть проекта с нуля. Проект состоит из панели администрирования, личного кабинета клиента и прокси сервиса для запросов к платным API.' +
                 ' Архитектура построена в виде отдельных, слабо связанных между собой микросервисов для того, чтобы лучше масштабировать прокси сервис и справляться с нагрузками. '
@@ -175,11 +175,6 @@ DATA_RU = {
             short_desc: 'Асинхронная ORM для ClickHouse.',
         },
         {
-            title: 'django-import-csv',
-            link: 'https://github.com/qvp/django-import-csv',
-            short_desc: 'Быстрый импорт CSV-дфнных в базуд анных через командную строку или код.',
-        },
-        {
             title: 'GO validation package',
             link: 'https://github.com/qvp/validation',
             short_desc: 'Пакет для валидации данных с расширенными возможностями.',
@@ -233,7 +228,7 @@ DATA_EN.desc = 'My name is Alexander, I\'m 29, I\'m from Russia. I have been wor
 
 // Translate work 'API Manager'
 DATA_EN.bestWorks[0].short_desc = 'B2B service for providing paid access to various company APIs.';
-DATA_EN.bestWorks[0].term = '6 months';
+DATA_EN.bestWorks[0].term = '7 months';
 DATA_EN.bestWorks[0].desc = 'B2B service for providing paid access to various company APIs. The project has been completed for the National Engineering Corporation (https://nekor.ru).';
 DATA_EN.bestWorks[0].my_work = 'I developed the server part of the project from scratch. The project consists of an administration panel, a personal account of the client and a proxy service for requests to paid APIs. '
     + 'The architecture is built in the form of separate, weakly interconnected microservices in order to better scale the proxy service and cope with the loads. '
@@ -281,8 +276,7 @@ DATA_EN.bestWorks[3].my_work = 'I made a system for searching logs and deliverin
 
 // Translate open source projects
 DATA_EN.openSource[0].short_desc = 'Asynchronous ORM for ClickHouse.';
-DATA_EN.openSource[1].short_desc = 'Fast import of CSV data into the database via command line or code.';
-DATA_EN.openSource[2].short_desc = 'A package for validating data with advanced features.';
+DATA_EN.openSource[1].short_desc = 'A package for validating data with advanced features.';
 
 // Trans UI
 DATA_EN.trans = {
