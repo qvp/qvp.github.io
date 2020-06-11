@@ -84,7 +84,7 @@ DATA_RU = {
         '<br>\n' +
         '<b>Неплохо разбираюсь</b> <i>(хорошо знаю теорию, несколько раз применял на практике):</i>\n' +
         '<br>\n' +
-        'RabbitMQ, ClickHouse, Многопоточность, Многопроцессорность, Golang, Микросервисная архитектура',
+        'RabbitMQ, ClickHouse, Многопоточность, Многопроцессорность, Golang, Микросервисная архитектура, FastAPI, SqlAlchemy',
     bestWorks: [
         {
             id: 1,
@@ -229,7 +229,7 @@ DATA_EN.desc = 'My name is Alexander, I\'m 29, I\'m from Russia. I have been wor
     '<br>\n' +
     '<b>good knowledges</b> <i>( know the theory well, put it into practice several times):</i>\n' +
     '<br>\n' +
-    'RabbitMQ, ClickHouse, Multithreading, Multiprocessing, Golang, Microservice architecture';
+    'RabbitMQ, ClickHouse, Multithreading, Multiprocessing, Golang, Microservice architecture, FastAPI, SqlAlchemy';
 
 // Translate work 'API Manager'
 DATA_EN.bestWorks[0].short_desc = 'B2B service for providing paid access to various company APIs.';
