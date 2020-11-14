@@ -1,6 +1,6 @@
 let browserLang = navigator.language.toLowerCase().includes('ru') ? 'ru' : 'en';
 let userLang = localStorage.getItem('lang');
-let lang = userLang || browserLang;
+let lang = 'en'; //userLang || browserLang;
 
 DATA[lang].bestWorks.map((item) => {
     return item.previews.map((src) => {

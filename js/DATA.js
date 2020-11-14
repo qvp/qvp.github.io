@@ -170,6 +170,11 @@ DATA_RU = {
     ],
     openSource: [
         {
+            title: 'Django REST Fast',
+            link: 'https://github.com/qvp/django-rest-fast',
+            short_desc: 'Создать API на Django.',
+        },
+        {
             title: 'aiochorm',
             link: 'https://github.com/qvp/aiochorm',
             short_desc: 'Асинхронная ORM для ClickHouse.',
@@ -208,7 +213,7 @@ DATA_EN = JSON.parse(JSON.stringify(DATA_RU))
 DATA_EN.tags[13].title = 'Microservice architecture'
 
 // Translate main description
-DATA_EN.desc = 'My name is Alexander, I\'m 29, I\'m from Russia. I have been working as a backend developer for 10 years, of which the ' +
+DATA_EN.desc = 'My name is Alexander, I\'m 30, I\'m from Russia. I have been working as a backend developer for 10 years, of which the ' +
     'last 5 years have been in Python. Most of my work is a long-term project that I did from scratch. ' +
     'This helped me gain versatile experience at all levels: choose the right architecture, design databases, ' +
     'find custom solutions, develop my own libraries, bring the project to production ready. I pay special ' +
@@ -217,14 +222,9 @@ DATA_EN.desc = 'My name is Alexander, I\'m 29, I\'m from Russia. I have been wor
     '<br>\n' +
     '<b>Know very well</b> <i>(know the theory perfectly, applied a lot in practice):</i>\n' +
     '<br>\n' +
-    'Python, Django, DRF, Postgres, SQL, OOP, Testing, Code quality (SOLID, DRY, KISS, etc), Asynchronous programming,\n' +
+    'Python, Django, DRF, Postgres, RabbitMQ, ClickHouse, SQL, SqlAlchemy, OOP, Testing, Code quality (SOLID, DRY, KISS, etc), Asynchronous programming,\n' +
     '<br>\n' +
-    'aiohttp, Celery, Redis, Docker, Unix\n' +
-    '<br>\n' +
-    '<br>\n' +
-    '<b>good knowledges</b> <i>( know the theory well, put it into practice several times):</i>\n' +
-    '<br>\n' +
-    'RabbitMQ, ClickHouse, Multithreading, Multiprocessing, Golang, Microservice architecture, FastAPI, SqlAlchemy';
+    'Microservice architecture, Multithreading, Multiprocessing, aiohttp, FastAPI, Celery, Redis, Docker, Unix\n'
 
 // Translate work 'API Manager'
 DATA_EN.bestWorks[0].short_desc = 'B2B service for providing paid access to various company APIs.';
@@ -275,14 +275,15 @@ DATA_EN.bestWorks[3].desc = 'The application allows you to view and manage logs 
 DATA_EN.bestWorks[3].my_work = 'I made a system for searching logs and delivering them in real time to ClickHouse and Channels. He also worked on other components of the system. Developed aiochorm - asynchronous version of clickhouse_orm, this library is posted on github.';
 
 // Translate open source projects
-DATA_EN.openSource[0].short_desc = 'Asynchronous ORM for ClickHouse.';
-DATA_EN.openSource[1].short_desc = 'A package for validating data with advanced features.';
+DATA_EN.openSource[0].short_desc = 'Fast create REST API with Swagger documentation based on native django views and forms.';
+DATA_EN.openSource[1].short_desc = 'Asynchronous ORM for ClickHouse.';
+DATA_EN.openSource[2].short_desc = 'A package for validating data with advanced features.';
 
 // Trans UI
 DATA_EN.trans = {
     'code_examples': 'Code examples',
     'resume': 'Resume',
-    'best_works': 'Best Works',
+    'best_works': 'Best Projects',
     'read_more': 'Read more...',
     'go_over': 'Go over...',
     'back': 'Back',

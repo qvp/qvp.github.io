@@ -48,18 +48,18 @@
                         <a class="nav-link" href="mailto:mail@alex.md"><img src="css/mail.png" class="icon">mail@alex.md</a>
                     </li>
                 </ul>
-                <ul class="pagination">
-                    <li :class="{'page-item': true, active: lang === 'ru'}">
-                        <a class="page-link" @click="switchLang('ru')" title="Русский">
-                            <img src="css/ru.png">
-                        </a>
-                    </li>
-                    <li :class="{'page-item': true, active: lang === 'en'}">
-                        <a class="page-link" @click="switchLang('en')" title="English">
-                            <img src="css/uk.png">
-                        </a>
-                    </li>
-                </ul>
+<!--                <ul class="pagination">-->
+<!--                    <li :class="{'page-item': true, active: lang === 'ru'}">-->
+<!--                        <a class="page-link" @click="switchLang('ru')" title="Русский">-->
+<!--                            <img src="css/ru.png">-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li :class="{'page-item': true, active: lang === 'en'}">-->
+<!--                        <a class="page-link" @click="switchLang('en')" title="English">-->
+<!--                            <img src="css/uk.png">-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                </ul>-->
             </div>
         </nav>
 
@@ -72,7 +72,13 @@
                     <img src="css/me.png">
                 </div>
                 <p class="mt-5" v-html="db.desc"></p>
-
+                <p class="text-center mt-40">
+                    <a href="mailto:mail@alex.md" class="btn btn-success width-255 opacity-08">
+                        <span class="font-size-26">Offer me a job</span>
+                        <br>
+                        <span class="font-size-12">mail@alex.md</span>
+                    </a>
+                </p>
                 <div class="delimiter mt-5">
                     <div>
                         <span>{{ db.trans.best_works }}</span>

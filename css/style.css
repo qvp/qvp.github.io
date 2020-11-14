@@ -1,7 +1,8 @@
 body {
     padding-top: 400px;
-    background: rgb(0, 9, 12) url("bg_light.jpg") top left no-repeat fixed;
-    background-position-y: -194px;
+    background: rgb(0, 9, 12) url("bg.jpg") top left no-repeat fixed;
+    background-position-y: -125px;
+    background-size: cover;
 }
 
 #scroll {
@@ -31,6 +32,14 @@ body {
 
 .font-size-30 {
     font-size: 30px;
+}
+
+.font-size-26 {
+    font-size: 26px;
+}
+
+.font-size-12 {
+    font-size: 12px;
 }
 
 .contact-link {
@@ -101,6 +110,18 @@ body {
 
 .mt-10 {
     margin-top: 6rem!important;
+}
+
+.mt-40 {
+    margin-top: 40px!important;
+}
+
+.width-255 {
+    width: 255px;
+}
+
+.opacity-08 {
+    opacity: 0.8;
 }
 
 .skill-label {
