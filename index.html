@@ -48,18 +48,6 @@
                         <a class="nav-link" href="mailto:mail@alex.md"><img src="css/mail.png" class="icon">mail@alex.md</a>
                     </li>
                 </ul>
-<!--                <ul class="pagination">-->
-<!--                    <li :class="{'page-item': true, active: lang === 'ru'}">-->
-<!--                        <a class="page-link" @click="switchLang('ru')" title="Русский">-->
-<!--                            <img src="css/ru.png">-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li :class="{'page-item': true, active: lang === 'en'}">-->
-<!--                        <a class="page-link" @click="switchLang('en')" title="English">-->
-<!--                            <img src="css/uk.png">-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                </ul>-->
             </div>
         </nav>
 
@@ -85,7 +73,7 @@
                     </div>
                 </div>
                 <div class="row mb-5">
-                    <div class="col-md-6 col-lg-4 col-xl-3 mt-5" v-for="(item, index) in db.bestWorks">
+                    <div class="col-md-6 col-lg-4 col-xl-4 mt-5" v-for="(item, index) in db.bestWorks">
                         <div class="preview-wrapper">
                             <img :src="'previews/' + item.preview" :id="'preview-' + index">
                         </div>
