@@ -129,48 +129,6 @@ DATA = {
             previews: ['apimanager/1.png', 'apimanager/2.png', 'apimanager/3.png', 'apimanager/4.png', 'apimanager/5.png', 'apimanager/6.png']
         },
         {
-            id: 2,
-            title: 'Astrologiko',
-            link: 'https://astrologiko.com',
-            short_desc: 'Your personal horoscope and chat with the astrologer in real time.',
-            term: '7 months',
-            desc: 'Astrologiko is a service of personalized horoscopes and the ability to communicate with an astrologer online. The basis of the service is the analysis of your planet map with a scientific program. Based on personal data (date, place and time of birth), a personal horoscope is formed, a natal chart for every day is drawn, and much more.',
-            my_work: 'The project is completely developed by me (client and server). There was a lot of data work in this project. Based on information about the user, the position of the planets and other astrological information was calculated for him. Based on these data, a daily horoscope is built and a map of the planets is drawn. For this, several libraries were developed and covered by tests. Due to resource consumption, a mechanism for distributing tasks in a queue was introduced. In addition to astrological calculations, there were many more mundane tasks: \n'
-    + '- Real-time chat with the astrologer \n'
-    + '- Accepting payments and sending checks to the tax \n'
-    + '- Manage user subscriptions \n'
-    + '- TARO Mini Game \n'
-    + '- Parsing coordinates of planets and other data from several sites \n'
-    + '- Mini CRM for managing astrologers, messages, etc. \n'
-    + '- Import and invite friends from the mail and much more.',
-            tags: [1,2,3,8,33],
-            api: ['CloudPayments', 'Dreamkas', 'Gmail', 'Yandex.Mail', 'Mail.ru', 'Vkontakte', 'Facebook', 'Odnoklassniki'],
-            parsing: ['Planet Coordination Tables', 'Several astrological sites'],
-            preview: 'astrologiko/1.png',
-            previews: ['astrologiko/1.png','astrologiko/2.png','astrologiko/3.png','astrologiko/4.png','astrologiko/5.png','astrologiko/6.png','astrologiko/7.png','astrologiko/8.png','astrologiko/9.png',]
-        },
-        {
-            id: 3,
-            title: 'WikiItem',
-            link: 'http://wikiitem.com',
-            short_desc: 'Analog Amazon. A place where buyers and sellers can find each other.',
-            term: '1 year and 2 months',
-            desc: 'A trading platform in which anyone can create their own store. The base has more than 550,000 items that you can sell in your store. '
-                + 'You can upload your products via the REST API or add them manually through the constructor. The designer helps to quickly add products, it automatically searches and offers images, video reviews. '
-                + 'Product editing is based on the principle of Wikipedia. A rating is awarded for filling the base.',
-            my_work: 'The project is completely developed by me. In addition to the site itself, many parsing and automatic processing tasks for a large number of products were solved. Some parts of the system are placed in separate microservices. '
-    + 'Created REST API for loading goods. Several separate auxiliary microservices have been created: \n'
-    + '- Microservice for parsing and processing goods before uploading to the main site. Built on Flask + Scrapy. \n'
-    + '- Microservice working on the product page - loads offers on the selected product from Ebay. Built on Flask + Ebay API. \n'
-    + '- Microservice working on the product page - loads offers on the selected product from Aliexpress. Built on Flask + Aliexpress API. \n'
-    + '- Microservice working in the product editor - searches for images in Google images by product name and offers options for download. Built on Node.js + Phantom.js \ n ',
-            tags: [1,2,38,8,37,39,41,43],
-            api: ['Ebay', 'Amazon', 'Aliexpress', 'YouTube', 'Yandex Market'],
-            parsing: ['Google Images', 'Yandex Market', 'Amazon Products'],
-            preview: 'wikiitem/1.png',
-            previews: ['wikiitem/1.png', 'wikiitem/2.png']
-        },
-        {
             id: 4,
             title: 'Atom Secure',
             link: null,
