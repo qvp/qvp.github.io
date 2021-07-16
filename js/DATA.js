@@ -72,9 +72,17 @@ DATA = {
             id: 44,
             title: 'FastAPI'
         },
+        {
+            id: 45,
+            title: 'SqlAlchemy'
+        },
+        {
+            id: 46,
+            title: 'Multiprocessing'
+        },
     ],
-    desc: 'My name is Alexander, I\'m 30, I\'m from Russia. I have been working as a backend developer for 10 years, of which the ' +
-        'last 5 years have been in Python. Most of my work is a long-term project that I did from scratch. ' +
+    desc: 'My name is Alexander, I\'m 30, I\'m from Russia. I have been working as a backend developer for 11 years, of which the ' +
+        'last 6 years have been in Python. Most of my work is a long-term project that I did from scratch. ' +
         'This helped me gain versatile experience at all levels: choose the right architecture, design databases, ' +
         'find custom solutions, develop my own libraries, bring the project to production ready. I pay special ' +
         'attention to the quality of the code. I am writing tests, documentation. Constantly engaged in continuing education.' +
@@ -91,14 +99,18 @@ DATA = {
             title: 'Protection Cloud',
             link: null,
             short_desc: 'Platform for cloud computing in energy sphere.',
-            term: '10 months',
+            term: '12 months',
             desc: 'Platform for cloud computing in energy sphere. The project has been completed for RTSoft (https://www.rtsoft.ru).',
             my_work: 'I developed the server part of the project from scratch. The project consists of an administration panel and a lot of microservices. '
-    + 'Microservices do the calculations and scale dynamically based on needs. At the moment, about 40 of them have been launched. '
-    + 'Services receive tasks through RabbitMQ. \n'
-    + '\n'
-    + 'in the administration panel, you can manage current tasks: add, cancel, restart, etc.',
-            tags: [1,36,9,8,37,42,44,43],
+                + 'Microservices do the calculations and scale dynamically based on needs. At the moment, about 40 of them have been launched.'
+                + '\n'
+                + '\n'
+                + 'Microservices are workers who receive tasks and are managed from the RabbitMQ. They are designed to be interchangeable and easily scalable. \n Developed using multiprocessing: calculations, command tracking, notifications are performed in different processes and interact with each other through multiprocessing.Queue. \n In many ways, they are similar to celery workers, but more suitable for PFCloud business processes. PfCloud tasks have a number of limitations: they must be run on a Windows host, only one task per worker, long-lived tasks with an intermediate result saved, and much more.'
+                + '\n'
+                + '\n'
+                + 'Admin panel for managing tasks and getting information about the current load of servers. Interacts with workers through RabbitMQ. Similar to Flower but with a bias in the business logic of the project PFCloud. Deployed on a Linux host. Written in FastApi.'
+                + 'Services receive tasks through RabbitMQ. \n',
+            tags: [1,44,45,46,36,8,37,42,43],
             api: [],
             parsing: [],
             preview: 'pcloud/1.png',
