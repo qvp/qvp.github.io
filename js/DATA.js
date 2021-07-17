@@ -90,7 +90,7 @@ DATA = {
         '<br>\n' +
         '<b>Know very well</b> <i>(know the theory perfectly, applied a lot in practice):</i>\n' +
         '<br>\n' +
-        'Python, Django, DRF, Postgres, RabbitMQ, ClickHouse, SQL, SqlAlchemy, OOP, Testing, Code quality (SOLID, DRY, KISS, etc), Asynchronous programming,\n' +
+        'Python, Django, DRF, Postgres, RabbitMQ, ClickHouse, SQL, SqlAlchemy, OOP, Testing, Code quality (SOLID, DRY, KISS, PEP8, PEP20), Asynchronous programming,\n' +
         '<br>\n' +
         'Microservice architecture, Multithreading, Multiprocessing, aiohttp, FastAPI, Celery, Redis, Docker, Unix\n',
     bestWorks: [
