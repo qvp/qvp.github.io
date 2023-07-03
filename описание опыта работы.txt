@@ -17,7 +17,7 @@ SqlAlchemy, SQL, Postgres, RabbitMQ, ClickHouse, Redis, MongoDB, Docker, Linux
 Разрабатывал масштабируемую архитектуру приложения с нуля.
 Богатый опыт применения асинхронности и многозадачности.
 Проектировал базы данных, писал SQL и оптимизировал запросы.
-Основной стек: FastAPI, aiohttp, SqlAlchemy, Alembic,
+Основной стек: Django, FastAPI, aiohttp, SqlAlchemy, Alembic,
                SQL, Postgres, ClickHouse, RabbitMQ, Redis, Docker.
 На данный момент изучаю: Apache Kafka, gRPC.
 
@@ -39,7 +39,7 @@ Python-разработчик
 - Внесение изменений и улучшений в существующие части системы.
 - Создание новый API-интерфейсов.
 - Написание тестов
-- Код ревью
+- Код-ревью
 
 Python, Асинхронность, Multiprocessing, RabbitMQ, PostgreSQL, Django, DRF, FastAPI, SqlAlchemy, pytest, Docker
 
