@@ -17,8 +17,8 @@ SqlAlchemy, SQL, Postgres, RabbitMQ, ClickHouse, Redis, MongoDB, Docker, Linux
 Разрабатывал масштабируемую архитектуру приложения с нуля.
 Богатый опыт применения асинхронности и многозадачности.
 Проектировал базы данных, писал SQL и оптимизировал запросы.
-Основной стек: Django, FastAPI, aiohttp, SqlAlchemy, Alembic,
-               SQL, Postgres, ClickHouse, RabbitMQ, Redis, Docker.
+Основной стек: Python, SQL, PostgreSQL, RabbitMQ, ClickHouse, Redis,
+               FastAPI, SqlAlchemy, Django, DRF, aiohttp, Docker.
 На данный момент изучаю: Apache Kafka, gRPC.
 
 Портфолио с превью https://alex.md
