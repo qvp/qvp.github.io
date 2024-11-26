@@ -27,13 +27,13 @@
 </head>
 <body>
     <div id="scroll">
-        <div class="corner"></div>
+<!--        <div class="corner"></div>-->
 
         <div class="container">
             <div class="row">
             <div class="col-12">
-                <p class="mt-minus-40">
-                    Меня зовут Александр, мне 32 года. Backend-разработкой занимаюсь 12 лет, из которых более 6 лет на Python.
+                <p class="mt-40">
+                    Меня зовут Александр, мне 34 года. Backend-разработкой занимаюсь 14 лет, из которых более 8 лет на Python.
                     Большинство моих работ - это долгосрочные проекты, которые я делал "с нуля". Это помогло мне получить разносторонний опыт на всех уровнях: выбирать правильную архитектуру,
                      проектировать базы данных, находить нестандартные решения, разрабатывать собственные библиотеки, доводить проект до "production ready".
                     Особое внимание уделяю качеству кода. Пишу тесты, документацию. Постоянно занимаюсь повышением квалификации.
@@ -68,7 +68,7 @@
                 <div class="row mb-5">
                     <div class="col-md-6 col-lg-4 col-xl-4 mt-5" v-for="(item, index) in db.bestWorks">
                         <div class="preview-wrapper">
-                            <img :src="'previews/' + item.preview" :id="'preview-' + index">
+                            <img :src="'previews/' + item.preview" :id="'preview-' + index" class="preview-img">
                         </div>
                         <h5 class="mt-3" v-html="item.title"></h5>
                         <p>{{ item.short_desc }}</p>
