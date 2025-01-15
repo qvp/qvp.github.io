@@ -1,3 +1,4 @@
-<p style="text-align:center;"><a href="https://alex.md">https://alex.md</a></p>
-<p style="text-align:center;"><a href="https://alex.md">https://alex.md</a></p>
-<p style="text-align:center;"><a href="https://alex.md">https://alex.md</a></p>
+### Портфолио доступно тут:
+<a href="https://alex.md">https://alex.md</a>  
+<a href="https://alex.md">https://alex.md</a>  
+<a href="https://alex.md">https://alex.md</a>  
