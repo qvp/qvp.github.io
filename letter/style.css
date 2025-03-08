@@ -30,10 +30,17 @@ textarea:focus {
     border-left: 2px solid #E7E9EB;
 }
 
-#copy {
+#copy, #paste {
     position: fixed;
-    right: 10px;
     top: 10px;
     font-size: 20px;
     cursor: pointer;
+}
+
+#copy {
+    right: 10px;
+}
+
+#paste {
+    right: 30.4%;
 }

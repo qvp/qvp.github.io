@@ -2,6 +2,7 @@ window.onload = function() {
     document.getElementById('template').onchange = change;
     document.getElementById('description').onchange = change;
     document.getElementById('copy').onclick = copyResult;
+    document.getElementById('paste').onclick = pasteDescription;
 
     loadData();
     change();
@@ -54,6 +55,10 @@ function copyResult() {
     navigator.clipboard.writeText(
         document.getElementById('result').value
     );
+}
+
+async function pasteDescription() {
+    document.getElementById('description').value = await navigator.clipboard.readText();
 }
 
 function loadData() {
