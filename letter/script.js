@@ -59,6 +59,7 @@ function copyResult() {
 
 async function pasteDescription() {
     document.getElementById('description').value = await navigator.clipboard.readText();
+    change();
 }
 
 function loadData() {
