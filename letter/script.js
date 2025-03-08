@@ -17,27 +17,22 @@ function change() {
 }
 
 function parse(template, description) {
-    let result = '';
-    const tplLines = template.split(/\r?\n/);
+    let result = [];
+    const lines = template.split(/\r?\n/);
 
-    for (let i = 0; i < tplLines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {
 
-        if (tplLines[i].startsWith('?')) {
-            let line = processTemplateLine(tplLines[i], description);
+        if (lines[i].startsWith('?')) {
+            let line = processTemplateLine(lines[i], description);
             if (line !== undefined) {
-                result += line;
+                result.push(line);
             }
         } else {
-            result += tplLines[i];
-        }
-
-        // Добавляем новую строку после каждой строчки кроме последней
-        if ( (i + 1) < tplLines.length ) {
-            result += '\r\n';
+            result.push(lines[i]);
         }
     }
 
-    return result;
+    return result.join('\n');
 }
 
 function processTemplateLine(line, description) {
