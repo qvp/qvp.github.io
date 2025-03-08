@@ -2,6 +2,9 @@ window.onload = function() {
     document.getElementById('template').onchange = change;
     document.getElementById('description').onchange = change;
     document.getElementById('copy').onclick = copyResult;
+
+    loadData();
+    change();
 };
 
 function change() {
@@ -9,6 +12,8 @@ function change() {
         document.getElementById('template').value,
         document.getElementById('description').value.toLowerCase(),
     );
+
+    saveData();
 }
 
 function parse(template, description) {
@@ -16,10 +21,19 @@ function parse(template, description) {
     const tplLines = template.split(/\r?\n/);
 
     for (let i = 0; i < tplLines.length; i++) {
+
         if (tplLines[i].startsWith('*')) {
-            result += processTemplateLine(tplLines[i], description);
+            let line = processTemplateLine(tplLines[i], description);
+            if (line !== undefined) {
+                result += line;
+            }
         } else {
-            result += tplLines[i] + '\r\n';
+            result += tplLines[i];
+        }
+
+        // Добавляем новую строку после каждой строчки кроме последней
+        if ( (i + 1) < tplLines.length ) {
+            result += '\r\n';
         }
     }
 
@@ -33,19 +47,26 @@ function processTemplateLine(line, description) {
     let keys = keysString.toLowerCase().split('|');
 
     for (let i = 0; i < keys.length; i++) {
-        if (description.includes(keys[i])) {
-            return lineResult + '\r\n';
+        let key = keys[i].trim();
+
+        if (description.includes(key)) {
+            return lineResult.trim();
         }
     }
-
-    return '';
 }
 
 function copyResult() {
-    let input = document.getElementById('hidden');
-    // input.value = document.getElementById('result').value;
-    // input.select();
-    // input.setSelectionRange(0, 99999); // For mobile devices
+    navigator.clipboard.writeText(
+        document.getElementById('result').value
+    );
+}
 
-    navigator.clipboard.writeText(document.getElementById('result').value)
+function loadData() {
+    document.getElementById('template').value = localStorage.getItem('template');
+    document.getElementById('description').value = localStorage.getItem('description');
+}
+
+function saveData() {
+    localStorage.setItem('template', document.getElementById('template').value);
+    localStorage.setItem('description', document.getElementById('description').value);
 }

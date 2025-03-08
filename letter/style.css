@@ -6,7 +6,7 @@ html, body, textarea {
 
 textarea {
     float: left;
-    width: 33.33%;
+    width: 30%;
     border: none;
     resize: none;
     box-sizing: border-box;
@@ -15,7 +15,11 @@ textarea {
 
 textarea:focus {
     outline: none;
-    background: #f8e8d7;
+    background: #ffffcc;
+}
+
+#template {
+    width: 40%;
 }
 
 #hidden {
@@ -23,7 +27,7 @@ textarea:focus {
 }
 
 #description, #result {
-    border-left: 2px solid #80a834;
+    border-left: 2px solid #E7E9EB;
 }
 
 #copy {
