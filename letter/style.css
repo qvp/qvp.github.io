@@ -1,0 +1,35 @@
+html, body, textarea {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    float: left;
+    width: 33.33%;
+    border: none;
+    resize: none;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+textarea:focus {
+    outline: none;
+    background: #f8e8d7;
+}
+
+#hidden {
+    display: none;
+}
+
+#description, #result {
+    border-left: 2px solid #80a834;
+}
+
+#copy {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
