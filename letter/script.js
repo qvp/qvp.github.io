@@ -22,7 +22,7 @@ function parse(template, description) {
 
     for (let i = 0; i < tplLines.length; i++) {
 
-        if (tplLines[i].startsWith('*')) {
+        if (tplLines[i].startsWith('?')) {
             let line = processTemplateLine(tplLines[i], description);
             if (line !== undefined) {
                 result += line;
