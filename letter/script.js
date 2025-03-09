@@ -1,14 +1,14 @@
 window.onload = function() {
-    document.getElementById('template').onchange = change;
-    document.getElementById('description').onchange = change;
+    document.getElementById('template').onchange = generateLetter;
+    document.getElementById('description').onchange = generateLetter;
     document.getElementById('copy').onclick = copyResult;
     document.getElementById('paste').onclick = pasteDescription;
 
     loadData();
-    change();
+    generateLetter();
 };
 
-function change() {
+function generateLetter() {
     document.getElementById('result').value = parse(
         document.getElementById('template').value,
         document.getElementById('description').value.toLowerCase(),
@@ -59,7 +59,7 @@ function copyResult() {
 
 async function pasteDescription() {
     document.getElementById('description').value = await navigator.clipboard.readText();
-    change();
+    generateLetter();
 }
 
 function loadData() {
