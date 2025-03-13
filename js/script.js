@@ -1,66 +1,59 @@
-DATA.bestWorks.map((item) => {
-    return item.previews.map((src) => {
-        let image = new Image();
-        image.src = 'previews/' + src;
-        return image;
-    });
-});
-
-let app = new Vue({
-    el: '#scroll',
+new Vue({
+    el: '#resume',
     data: {
-        db: DATA,
-        currentPage: null
+        data: DATA,
     },
     methods: {
-        setCurrentPage(page_id) {
-            this.currentPage = page_id;
-            if (page_id) {
-                location.hash = '#' + page_id;
-            } else {
-                history.replaceState(null, null, ' ');
+        gallery(index) {
+            // $('#gallery' + index).show();
+
+            let images = [];
+            for (let i = 0; i < this.data[index]['gallery'].length; i++) {
+                images.push({src: this.data[index]['gallery'][i], srct: this.data[index]['gallery'][i], title: ''})
             }
-        },
-        getTagsNames(tags_ids) {
-            return tags_ids.map((id) => {
-                return this.db.tags.filter((tag) => {
-                    return tag.id === id;
-                })[0].title;
+
+            // $('#gallery' + index).on('galleryRenderEnd.nanogallery2', function(e) {
+            //     $('#gallery' + index).find('img').click();
+            // });
+
+            $('#gallery' + index).nanogallery2({
+                items: images,
+                thumbnailWidth: 'auto',
+                thumbnailHeight: 50,
+                thumbnailAlignment: 'center',
+                thumbnailLabel: {display: false},
+                thumbnailHoverEffect2: 'imageScaleIn80|labelAppear75',
             });
+
+
+
+            // window.location.hash = '#nanogallery/gallery' + index + '/0/' + (index + 1);
         },
-        getSideImages(images, side) {
-            let res = [], i = side === 'left' ? 0 : 1;
-            for (i; i < images.length; i += 2) {
-                res.push(images[i]);
-            }
-            return res;
-        }
     },
-    watch: {
-        currentPage: function (_new, old) {
-            let body = document.getElementsByTagName("body")[0];
-            if (_new === null) {
-                body.style.overflowY = 'scroll';
-            } else {
-                body.style.overflowY = 'hidden';
-            }
-        }
-  },
     mounted() {
-        if (location.hash.length > 1) {
-            let id = parseInt(location.hash.substr(1));
-            this.db.bestWorks.forEach((item) => {
-                if (item.id === id) {
-                    this.setCurrentPage(id);
+        for (let i = 0; i < this.data.length; i++) {
+            if (this.data[i].gallery) {
+
+                let images = [];
+                let $gallery = $('#gallery' + i);
+                console.log($gallery)
+                for (let j = 0; j < this.data[i]['gallery'].length; j++) {
+                    images.push({src: this.data[i]['gallery'][j], srct: this.data[i]['gallery'][j]})
                 }
-            });
+
+                $gallery.nanogallery2({
+                    items: images,
+                    thumbnailWidth: 'auto',
+                    thumbnailHeight: 50,
+                    thumbnailAlignment: 'center',
+                    thumbnailLabel: {display: false},
+                    thumbnailHoverEffect2: 'imageScaleIn80|labelAppear75',
+                    thumbnailBorderHorizontal: 1,
+                    thumbnailBorderVertical: 1,
+                });
+
+                $gallery.show();
+            }
         }
     }
 });
-
-
-window.addEventListener('hashchange', () => {
-  if (location.hash.length === 0) {
-      app.setCurrentPage(null);
-  }
-}, false);
