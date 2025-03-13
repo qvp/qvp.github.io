@@ -36,9 +36,11 @@ new Vue({
 
                 let images = [];
                 let $gallery = $('#gallery' + i);
-                console.log($gallery)
+
                 for (let j = 0; j < this.data[i]['gallery'].length; j++) {
-                    images.push({src: this.data[i]['gallery'][j], srct: this.data[i]['gallery'][j]})
+                    let src = this.data[i]['gallery'][j];
+                    let srct = src.replace('gallery', 'gallery/thumb').replace('.png', '.jpg')
+                    images.push({src: src, srct: srct})
                 }
 
                 $gallery.nanogallery2({
@@ -50,6 +52,7 @@ new Vue({
                     thumbnailHoverEffect2: 'imageScaleIn80|labelAppear75',
                     thumbnailBorderHorizontal: 1,
                     thumbnailBorderVertical: 1,
+                    thumbnailBorderColor: '#ffffff',
                 });
 
                 $gallery.show();

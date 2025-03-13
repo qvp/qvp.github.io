@@ -29,11 +29,8 @@ h2,h3 {
     width: 20px;
 }
 
-.screenshots {
-    cursor: pointer;
-    padding-left: 10px;
-    color: #ed9b9b;
-    /*text-decoration: underline dashed;*/
+.nGY2GThumbnail {
+    border-color: #f4f0f0 !important;
 }
 
 @media print {
