@@ -2,8 +2,13 @@ a {
     text-decoration: none;
 }
 
+b {
+    font-weight: 500;
+}
+
 h2,h3 {
     text-transform: uppercase;
+    font-weight: 200;
 }
 
 .container {
@@ -31,6 +36,11 @@ h2,h3 {
 
 .nGY2GThumbnail {
     border-color: #f4f0f0 !important;
+}
+
+.li {
+    opacity: 0.6;
+    font-size: 12px;
 }
 
 @media print {

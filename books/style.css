@@ -106,10 +106,23 @@ body {
     margin-left: 14px;
 }
 
-.realvjy {
-    width: 900px;
-    padding: 20px;
-    margin: 0 auto;
-    font-family: sans-serif;
-    text-align: center
+@media only screen and (max-width: 1400px) {
+    .book-wrapper {
+        max-width: 1000px;
+        column-count: 5;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .book-wrapper {
+        max-width: 900px;
+        column-count: 4;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .book-wrapper {
+        max-width: 500px;
+        column-count: 2;
+    }
 }

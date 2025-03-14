@@ -1,3 +1,5 @@
+DATA.forEach((i) => { i.text = i.text.replaceAll('🔹', '<span class="li">🔹</span>')});
+
 new Vue({
     el: '#resume',
     data: {
