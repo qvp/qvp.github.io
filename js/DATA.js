@@ -15,11 +15,13 @@ DATA = [
         🔹Разработка core-модуля для использования во всех микросервисах.<br>
         🔹Сделал систему jwt-авторизации между сервисами на основе Keycloak.<br>
         🔹Внедрял метрики Grafana, Prometheus, Sentry.<br>
+        🔹Реализовал 2FA с google authenticator, sms, email.<br>
         🔹Участвовал в создании CI\\CD пайплайнов в месте с devops специалистом.<br>
         🔹Реализовал систему websocket-уведомлений от сервисов на Centrifugo.<br>
         🔹Написание Docker и Docker compose конфигов.<br>
         🔹Интегрировал проект со сторонними системами Garantex, Swapster.<br>
         🔹Написание unit-тестов, нагрузочных тестов, функциональных тестов.<br>
+        🔹Соблюдение стандартов кода с помощью pylint и других инструментов.<br>
         🔹Проведение код-ревью других разработчиков.<br>
         <br>
         ⚡️Python, FastAPI, SqlAlchemy Alembic, Asyncio, PostgreSQL, Apache Kafka, Redis, Микросервисная архитектура, Keycloak, Centrifugo, pytest, Docker
