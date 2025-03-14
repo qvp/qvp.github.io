@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Хорошие книги</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="shelf" class="book-wrapper">
+		<div class="book-items" v-for="book in books">
+			<div class="main-book-wrap">
+				<div class="book-cover">
+					<div class="book-inside"></div>
+					<div class="book-image">
+						<img :src="book"/>
+						<div class="effect"></div>
+						<div class="light"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../js/vue.min.js"></script>
+	<script>
+        new Vue({
+            el: '#shelf',
+            data: {
+                books: [
+                    'covers/2.webp',
+                    'covers/1.webp',
+                    'covers/4.webp',
+                    'covers/3.webp',
+                    'covers/5.webp',
+                    'covers/6.webp',
+                    'covers/7.webp',
+                    'covers/8.webp',
+                    'covers/9.webp',
+                    'covers/10.webp',
+                    'covers/11.webp',
+                    'covers/12.webp',
+				],
+            }
+        });
+	</script>
+</body>
+</html>
