@@ -2,12 +2,12 @@ DATA = [
     {
         'company': 'B.ART',
         'company_link': 'bart-group.com',
-        'desc': 'Python developer',
+        'desc': 'Python backend dev',
         'term': '1 год 5 месяцев',
         'project_link': 'getcrypto.ru',
         'gallery': ['gallery/getcrypto/schema.png'],
         'text': `
-        Работал в команде в качестве основного backend-разработчика. Вместе мы разработали с нуля проект в Fintech сфере.<br>
+        Работал в команде в качестве основного backend-разработчика. Вместе мы создали с нуля проект в Fintech сфере.<br>
         <br>
         🔹Проектирование архитектуры проекта и разбиение его на микросервисы.<br>
         🔹Построил систему общения между сервисами на основе Apache Kafka.<br>
@@ -31,11 +31,11 @@ DATA = [
     {
         'company': 'Scout Jobs',
         'company_link': 'scoutjobs.cc',
-        'desc': 'Python developer',
+        'desc': 'Python backend dev',
         'term': '1 год 3 месяца',
         'gallery': ['gallery/scoutjobs/schema.png'],
         'text': `
-        Работал в команде в качестве основного backend-разработчика. Вместе мы разработали с нуля сервис для массового найма персонала.<br>
+        Работал в команде в качестве основного backend-разработчика. Вместе мы создали с нуля сервис для массового найма персонала.<br>
         <br>
         🔹Проектировал архитектуру проекта и разбиение его на микросервисы.<br>
         🔹Разработал систему синхронизации данных в реальном времени.<br>
@@ -52,11 +52,11 @@ DATA = [
     {
         'company': 'SibEDGE',
         'company_link': 'sibedge.com',
-        'desc': 'Python developer',
+        'desc': 'Python backend dev',
         'term': '1 год',
         'gallery': ['gallery/sibedge/schema.png', 'gallery/sibedge/1.png', 'gallery/sibedge/2.png'],
         'text': `
-        Работал в команде в качестве основного backend-разработчика. Вместе мы разработали с нуля проект в сфере энергетики.<br>
+        Работал в команде в качестве основного backend-разработчика. Вместе мы создали с нуля проект в сфере энергетики.<br>
         <br>
         🔹Проектирование микросервисной архитектуры проекта.<br>
         🔹Создал систему распределенных воркеров.<br>
@@ -71,7 +71,7 @@ DATA = [
     {
         'company': 'Nekor',
         'company_link': 'nekor.ru',
-        'desc': 'Python developer',
+        'desc': 'Python backend dev',
         'term': '1 год',
         'gallery': ['gallery/nekor/schema.png', 'gallery/nekor/1.png', 'gallery/nekor/2.png', 'gallery/nekor/3.png', 'gallery/nekor/4.png', 'gallery/nekor/5.png', 'gallery/nekor/6.png'],
         'text': `
@@ -91,7 +91,7 @@ DATA = [
     {
         'company': 'Atom Secure',
         'company_link': null,
-        'desc': 'Python developer',
+        'desc': 'Python backend dev',
         'term': '1 год 1 месяц',
         'gallery': ['gallery/atomsecure/1.png', 'gallery/atomsecure/2.png', 'gallery/atomsecure/3.png'],
         'text': `
@@ -113,7 +113,7 @@ DATA = [
     {
         'company': 'Wiki Item',
         'company_link': null,
-        'desc': 'PHP developer',
+        'desc': 'PHP backend dev',
         'term': '1 год 3 месяца',
         'gallery': ['gallery/wikiitem/1.png', 'gallery/wikiitem/2.png', 'gallery/wikiitem/3.png', 'gallery/wikiitem/4.png', 'gallery/wikiitem/5.png'],
         'text': `
@@ -138,7 +138,7 @@ DATA = [
     {
         'company': 'Astrologiko',
         'company_link': null,
-        'desc': 'PHP developer',
+        'desc': 'PHP backend dev',
         'term': '8 месяцев',
         'gallery': ['gallery/astrologiko/1.png', 'gallery/astrologiko/2.png', 'gallery/astrologiko/3.png', 'gallery/astrologiko/4.png', 'gallery/astrologiko/5.png', 'gallery/astrologiko/6.png', 'gallery/astrologiko/7.png', 'gallery/astrologiko/8.png', 'gallery/astrologiko/9.png'],
         'text': `
@@ -162,7 +162,7 @@ DATA = [
     {
         'company': 'SimLead',
         'company_link': null,
-        'desc': 'PHP developer',
+        'desc': 'PHP backend dev',
         'term': '2 года 2 месяца',
         'text': `
         Работал над несколькими проектами в качестве штатного сотрудника в аутсорс компании.<br>
@@ -179,7 +179,7 @@ DATA = [
     {
         'company': 'ЧоПочом',
         'company_link': 'chopochom.com',
-        'desc': 'PHP developer',
+        'desc': 'PHP backend dev',
         'term': '8 месяцев',
         'text': `
         С нуля разработал систему для автоматизации процессов создания и управления контекстной рекламой Yandex Direct для рекламного агенства ЧоПочом.<br>
