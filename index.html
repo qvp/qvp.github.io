@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Александр🔹Python разработчик</title>
+	<title>Александр • backend разработчик</title>
+	<link rel="icon" type="image/png" href="/favicon32.png">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
@@ -49,7 +50,7 @@
 			<div class="col col-9">
 				<div :id=" 'gallery' + index" class="no-print" style="display:none" v-if="item.gallery"></div>
 				<a :href=" 'https://' + item.project_link" target="_blank" v-if="item.project_link">{{item.project_link}}</a>
-				<div v-html="item.text"></div>
+				<div class="text" v-html="item.text"></div>
 			</div>
 		</div>
 
