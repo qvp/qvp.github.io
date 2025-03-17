@@ -2,7 +2,7 @@ DATA = [
     {
         'company': 'B.ART',
         'company_link': 'bart-group.com',
-        'desc': 'Python backend dev',
+        'desc': 'Senior Python backend dev',
         'term': '1 год 5 месяцев',
         'project_link': 'getcrypto.ru',
         'gallery': ['gallery/getcrypto/schema.png'],
@@ -31,7 +31,7 @@ DATA = [
     {
         'company': 'Scout Jobs',
         'company_link': 'scoutjobs.cc',
-        'desc': 'Python backend dev',
+        'desc': 'Senior Python backend dev',
         'term': '1 год 3 месяца',
         'gallery': ['gallery/scoutjobs/schema.png'],
         'text': `
@@ -52,7 +52,7 @@ DATA = [
     {
         'company': 'SibEDGE',
         'company_link': 'sibedge.com',
-        'desc': 'Python backend dev',
+        'desc': 'Senior Python backend dev',
         'term': '1 год',
         'gallery': ['gallery/sibedge/schema.png', 'gallery/sibedge/1.png', 'gallery/sibedge/2.png'],
         'text': `
