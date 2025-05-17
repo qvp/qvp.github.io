@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Alexander • backend developer</title>
+	<link rel="icon" type="image/png" href="/css/me.png">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	   m[i].l=1*new Date();
+	   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+	   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+	   ym(62635345, "init", {
+			clickmap:true,
+			trackLinks:true,
+			accurateTrackBounce:true,
+			webvisor:true
+	   });
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/62635345" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+	<div class="container" id="resume">
+		<div class="row">
+			<div class="col col-3">
+				<div class="text-center mb-5">
+					<img src="css/me.png" class="me">
+					<br>
+					<br>
+					<a href="https://github.com/qvp" target="_blank">github.com/qvp</a>
+					<br>
+					mail@alex.md
+				</div>
+			</div>
+			<div class="col col-9">
+				My name is Alexander, I am 34 years old.<br>
+				15 years working as a backend developer<br>
+				Golang as a second language<br>
+<!--				<a href="/books" target="_blank">My favorite programming books</a><br>-->
+				<br>
+				<div class="skills">
+					<span v-for="skill in skills">{{skill}}</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" v-for="(item, index) in data">
+			<div class="col col-3 text-right">
+				<h3>{{item.company}}</h3>
+				<div v-if="item.company_link">
+					<a :href="'https://' + item.company_link" target="_blank">{{item.company_link}}</a>
+				</div>
+				{{item.position}} <br>
+				{{item.term}} <br>
+			</div>
+			<div class="col col-9">
+				<div :id=" 'gallery' + index" class="no-print" style="display:none" v-if="item.gallery"></div>
+				<a :href=" 'https://' + item.project_link" target="_blank" v-if="item.project_link">{{item.project_link}}</a>
+				<div class="text">
+					<div class="title">{{item.title}}</div>
+					<div class="desc">
+						<div class="desc-text" v-html="item.desc" v-if="item.collapsed"></div>
+						<a v-if=" ! item.collapsed" class="show-desc" @click="collapseDesc(index)">Expand description</a>
+					</div>
+					<div class="skills">
+						<template v-for="skill in item.skills">
+							<span class="mini">{{skill}}</span>
+						</template>
+					</div>
+					<div class="page-break" v-if="item.page_break"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    	<script src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+
+		<script src="js/DATA_EN.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/script.js"></script>
+	</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+html, body, textarea {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    float: left;
+    width: 30%;
+    border: none;
+    resize: none;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+textarea:focus {
+    outline: none;
+    background: #ffffcc;
+}
+
+#template {
+    width: 40%;
+}
+
+#hidden {
+    display: none;
+}
+
+#description, #result {
+    border-left: 2px solid #E7E9EB;
+}
+
+#copy, #paste {
+    position: fixed;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#copy {
+    right: 10px;
+}
+
+#paste {
+    right: 30.4%;
+}
