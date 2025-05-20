@@ -53,7 +53,7 @@ DATA = [
         • Implemented flexible synchronization scenarios (push & pull)<br>
         `,
         'skills': ['Python', 'FastAPI', 'SqlAlchemy', 'Microservices', 'Alembic', 'Asyncio', 'PostgreSQL', 'RabbitMQ', 'Multiprocessing', 'pytest', 'Docker'],
-        'page_break': true,
+        'page_break': false,
     },
     {
         'company': 'SibEDGE',
@@ -74,7 +74,7 @@ DATA = [
         • Achieved 85%+ code test coverage (unit, functional, load tests)<br>
         `,
         'skills': ['Python', 'FastAPI', 'MongoDB', 'Microservices', 'RabbitMQ', 'ELK', 'Multiprocessing', 'pytest', 'Docker'],
-        'page_break': false,
+        'page_break': true,
     },
     {
         'company': 'Nekor',
@@ -93,7 +93,7 @@ DATA = [
         • Implemented asynchronous architecture to ensure high performance<br>
         `,
         'skills': ['Python', 'aiohttp', 'asyncio', 'SqlAlchemy Core', 'PostgreSQL', 'ClickHouse', 'Redis', 'Microservices', 'Django', 'pytest', 'Docker'],
-        'page_break': true,
+        'page_break': false,
     },
     {
         'company': 'Atom Secure',
@@ -113,7 +113,7 @@ DATA = [
         • Ensured test coverage for developed modules<br>
         `,
         'skills': ['Python', 'PostgreSQL', 'ClickHouse', 'Redis', 'Django', 'DRF', 'Channels', 'Celery', 'unittest', 'Docker', 'asyncio'],
-        'page_break': false,
+        'page_break': true,
     },
     {
         'company': 'Wiki Item',
@@ -137,7 +137,7 @@ DATA = [
         • Integrated APIs from Ebay, Amazon, Aliexpress, YouTube and Yandex Market<br>
         `,
         'skills': ['SQL', 'PostgreSQL', 'Microservices', 'PHP', 'Laravel framework', 'Slim', 'tests'],
-        'page_break': true,
+        'page_break': false,
     },
     {
         'company': 'Astrologiko',
@@ -159,7 +159,7 @@ DATA = [
         • Tarot card mini-game feature<br>
         `,
         'skills': ['SQL', 'MySQL', 'Websockets', 'PHP', 'Laravel framework', 'tests'],
-        'page_break': false,
+        'page_break': true,
     },
     {
         'company': 'SimLead',
@@ -175,7 +175,7 @@ DATA = [
         <a href="https://a2xanxiety.com" target="_blank">a2xanxiety.com</a> - E-commerce store with CRM system. Developed from scratch.<br>
         `,
         'skills': ['SQL', 'MySQL', 'MongoDB', 'PHP', 'Laravel framework', 'tests'],
-        'page_break': true,
+        'page_break': false,
     },
     {
         'company': 'ChoPochom',

@@ -74,8 +74,16 @@ h2,h3 {
     height: auto;
 }
 
+.hide-desc {
+    display: none;
+}
+
 @media print {
     .no-print {
         display: none !important;
+    }
+
+    .hide-desc {
+        display: block;
     }
 }
