@@ -1,0 +1,36 @@
+a {
+    text-decoration: none;
+}
+
+h2,h3 {
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 999px;
+    padding: 0 20px 0 0 !important;
+}
+
+.col {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.col-3 {
+    text-align: right;
+    background: #f4f0f0;
+}
+
+.page-break {
+    page-break-before: always;
+}
+
+.icon {
+    width: 20px;
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
