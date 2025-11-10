@@ -19,21 +19,30 @@ function generateLetter() {
 
 function parse(template, description) {
     let result = [];
+    let other = [];
     const lines = template.split(/\r?\n/);
 
     for (let i = 0; i < lines.length; i++) {
 
         if (lines[i].startsWith('?')) {
-            let line = processTemplateLine(lines[i], description);
-            if (line !== undefined) {
+            const [line, is_relevant] = processTemplateLine(lines[i], description);
+
+            if (is_relevant) {
                 result.push(line);
+            } else {
+                other.push(line);
             }
+
+        } else if (lines[i].startsWith('#')) {
+            continue;
         } else {
             result.push(lines[i]);
         }
     }
 
-    return result.join('\n');
+    let text = result.join('\n');
+
+    return text.replace('{other}', other.join('\n'))
 }
 
 function processTemplateLine(line, description) {
@@ -41,14 +50,17 @@ function processTemplateLine(line, description) {
     let keysString = parts[0];
     let lineResult = parts[1];
     let keys = keysString.toLowerCase().split('|');
+    let is_relevant = false;
 
     for (let i = 0; i < keys.length; i++) {
         let key = keys[i].trim();
 
         if (description.includes(key)) {
-            return lineResult.trim();
+            is_relevant = true;
         }
     }
+
+    return [lineResult.trim(), is_relevant]
 }
 
 function copyResult() {
