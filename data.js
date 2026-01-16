@@ -186,7 +186,6 @@ DATA = {
             tags: [1, 44, 36, 8, 76, 77, 68, 9, 69, 45],
             api: [],
             parsing: [],
-            preview: 'llm/schema.png',
             previews: ['llm/schema.png']
         },
         {
@@ -214,7 +213,6 @@ DATA = {
             tags: [1,37,60,46,67,8,9,44,45,68,69,42,43,70,71],
             api: ['Garantex', 'Swapster'],
             parsing: [],
-            preview: 'cryptop/schema.png',
             previews: ['cryptop/schema.png', 'cryptop/1.jpg', 'cryptop/2.jpg', 'cryptop/3.jpg']
         },
         {
@@ -238,7 +236,6 @@ DATA = {
             tags: [1,44,45,46,48,36,8,37,42,43],
             api: ['Google Sheets', 'Helpdesk', 'Salesforce', 'AMO CRM'],
             parsing: [],
-            preview: 'integrations/schema.png',
             previews: ['integrations/schema.png']
         },
         {
@@ -259,7 +256,6 @@ DATA = {
             tags: [1,44,45,46,36,8,37,42,43],
             api: [],
             parsing: [],
-            preview: 'pcloud/schema.png',
             previews: ['pcloud/schema.png', 'pcloud/2.png', 'pcloud/1.png']
         },
         {
@@ -282,7 +278,6 @@ DATA = {
             tags: [1,2,4,8,34,9,37,43,42, 60],
             api: [],
             parsing: [],
-            preview: 'apimanager/schema.png',
             previews: ['apimanager/schema.png', 'apimanager/1.png', 'apimanager/2.png', 'apimanager/3.png', 'apimanager/4.png', 'apimanager/5.png', 'apimanager/6.png']
         },
         {
@@ -305,8 +300,7 @@ DATA = {
             tags: [1,8,34,9,2,3,61,62,63,43],
             api: [],
             parsing: [],
-            preview: 'atom/schema.png',
-            previews: ['atom/schema.png', 'atom/1.png', 'atom/2.png', 'atom/3.png']
+            previews: ['atom/schema.png', 'atom/1.jpg', 'atom/2.png', 'atom/3.png']
         },
         {
             id: 1,
@@ -331,8 +325,7 @@ DATA = {
             tags: [64,8,37,72,75,73,74, 81, 82],
             api: ['Ebay', 'Amazon', 'Aliexpress', 'YouTube', 'Яндекс Маркет'],
             parsing: ['Google Images', 'Яндекс Маркет', 'Amazon'],
-            preview: 'wikiitem/1.png',
-            previews: ['wikiitem/1.png', 'wikiitem/2.png', 'wikiitem/3.png', 'wikiitem/4.png', 'wikiitem/5.png']
+            previews: ['wikiitem/1.jpg', 'wikiitem/2.png', 'wikiitem/3.png', 'wikiitem/4.png', 'wikiitem/5.png']
         },
         {
             id: 8,
@@ -356,7 +349,7 @@ DATA = {
             tags: [64, 78, 80, 72, 73, 74, 81, 82],
             api: ['Налоговая'],
             parsing: ['Астрологические сайты'],
-            previews: ['astrologiko/1.png', 'astrologiko/2.png', 'astrologiko/3.png', 'astrologiko/4.png', 'astrologiko/5.png', 'astrologiko/6.png', 'astrologiko/7.png', 'astrologiko/8.png', 'astrologiko/9.png'],
+            previews: ['astrologiko/1.jpg', 'astrologiko/2.png', 'astrologiko/3.png', 'astrologiko/4.png', 'astrologiko/5.png', 'astrologiko/6.png', 'astrologiko/7.png', 'astrologiko/8.png', 'astrologiko/9.png'],
         },
         {
             id: 9,
