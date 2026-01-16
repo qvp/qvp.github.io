@@ -1,161 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" class="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="yandex-verification" content="cd07e16df7492215" />
-    <title>Александр · Python разработчик</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-       ym(62635345, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-       });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/62635345" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио разработчика</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="lib/favicon-512.png">
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+<!--    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">-->
+    <script src="lib/vue.global.js"></script>
+    <link rel="stylesheet" href="lib/app.css">
 </head>
 <body>
-    <div id="scroll">
-<!--        <div class="corner"></div>-->
+    <div id="app">
+        <!-- Навигация -->
+        <nav class="nav">
+            <div class="container nav-content">
+                <a href="#" class="nav-logo">
+                    <i class="fas fa-code"></i>
+                    Портфолио
+                </a>
+                <div class="nav-links">
+                    <a href="#about" class="nav-link" :class="{active: activeSection === 'about'}" @click="scrollTo('about')">Обо мне</a>
+                    <a href="#skills" class="nav-link" :class="{active: activeSection === 'skills'}" @click="scrollTo('skills')">Навыки</a>
+                    <a href="#projects" class="nav-link" :class="{active: activeSection === 'projects'}" @click="scrollTo('projects')">Проекты</a>
+                    <a href="#opensource" class="nav-link" :class="{active: activeSection === 'opensource'}" @click="scrollTo('opensource')">Open Source</a>
+                    <a href="#contact" class="nav-link" :class="{active: activeSection === 'contact'}" @click="scrollTo('contact')">Контакты</a>
+                </div>
+            </div>
+        </nav>
 
-        <div class="container">
-            <div class="row">
-            <div class="col-12">
-                <p class="mt-40">
-                    Меня зовут Александр, мне 34 года. Backend-разработкой занимаюсь 12 лет, из которых более 8 лет на Python.
-                    Большинство моих работ - это долгосрочные проекты, которые я делал "с нуля". Это помогло мне получить разносторонний опыт на всех уровнях: выбирать правильную архитектуру,
-                     проектировать базы данных, находить нестандартные решения, разрабатывать собственные библиотеки, доводить проект до "production ready".
-                    Особое внимание уделяю качеству кода. Пишу тесты, документацию. Постоянно занимаюсь повышением квалификации.
-                    <br>
-                    В свободное время предпочитаю активный отдых.
-                    <br>
-                    <p style="text-align: center">
-                        <a href="mailto:mail@alex.md" target="_blank" class="btn btn-link">
-                            <span>mail@alex.md</span>
-                        </a>
-                        <a href="https://github.com/qvp" target="_blank" class="btn btn-link">
-                            <img src="css/github.png" class="icon invert-dark"> <span>Github</span>
-                        </a>
-                        <a href="https://hh.ru/resume/b54b1539ff0f98a1dd0039ed1f76674d344651" target="_blank" class="btn btn-link">
-                            <img src="css/hh.png" class="icon"> <span>Резюме</span>
-                        </a>
-                    </p>
-                    <br>
-                    <b><i>Основные навыки:</i></b>
-                    <br>
-                    Python, FastAPI, SqlAlchemy, alembic, asyncio, pytest, docker
-                    <br>
-                    Микросервисная архитектура, асинхронность, процессы, потоки, конкурентное программирование
-                    <br>
-                    SQL, Postgres, RabbitMQ, Apache Kafka, ClickHouse, Redis
-                    <br>
-                    ООП, Тестирование, Качество кода (SOLID, DRY, KISS, PEP20), Linux
-                    <br>
-                    <br>
-                    Golang в качестве второго языка
-                </p>
-                <div class="delimiter mt-5">
-                    <div>
-                        <span>Recent Projects</span>
+        <!-- Шапка -->
+        <header class="header">
+            <div class="header-bg"></div>
+            <div class="header-image"></div>
+            <div class="container">
+                <div class="header-content">
+                    <h1 class="header-title">Backend разработчик</h1>
+                    <p class="header-subtitle">Специализируюсь на создании высоконагруженных и масштабируемых бэкенд-систем с использованием Python, AI и современных микросервисных архитектур.</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <button class="btn btn-primary" @click="scrollTo('projects')">
+                            <i class="fas fa-briefcase"></i>
+                            Смотреть проекты
+                        </button>
+                        <button class="btn btn-secondary" @click="scrollTo('opensource')">
+                            <i class="fab fa-github"></i>
+                            Open Source
+                        </button>
                     </div>
                 </div>
-                <div class="row mb-5">
-                    <div class="col-md-6 col-lg-4 col-xl-4 mt-5" v-for="(item, index) in db.bestWorks">
-                        <div class="preview-wrapper">
-                            <img :src="'previews/' + item.preview" :id="'preview-' + index" class="preview-img">
+            </div>
+        </header>
+
+        <!-- Основной контент -->
+        <main>
+            <!-- Обо мне -->
+            <section id="about" class="section">
+                <div class="container">
+                    <h2 class="section-title">Обо мне</h2>
+                    <div style="max-width: 800px;">
+                        <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
+                            Меня зовут Александр, мне 35 лет. Backend-разработкой занимаюсь 15 лет, из которых более 8 лет я разрабатываю сложные и интересные проекты на Python. Большинство моих работ - это долгосрочные проекты, которые я делал "с нуля".
+                        </p>
+                        <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
+                            Это помогло мне получить разносторонний опыт на всех уровнях: выбирать правильную архитектуру, проектировать базы данных, находить нестандартные решения, разрабатывать собственные библиотеки, доводить проект до "production ready". Особое внимание уделяю качеству кода. Пишу тесты, документацию. Постоянно занимаюсь повышением квалификации.
+                            <br>
+                            В свободное время предпочитаю активный отдых.
+                        </p>
+                        <div style="display: flex; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div style="width: 10px; height: 10px; background-color: var(--success); border-radius: 50%;"></div>
+                                <span>Более 10 крупных проектов</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div style="width: 10px; height: 10px; background-color: var(--warning); border-radius: 50%;"></div>
+                                <span>15+ лет опыта</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div style="width: 10px; height: 10px; background-color: var(--primary); border-radius: 50%;"></div>
+                                <span>Микросервисная архитектура</span>
+                            </div>
                         </div>
-                        <h5 class="mt-3" v-html="item.title"></h5>
-                        <p>{{ item.short_desc }}</p>
-                        <a href="javascript:void(0);" @click="setCurrentPage(item.id)" class="open-modal">Подробнее...</a>
                     </div>
                 </div>
+            </section>
 
-                <div class="delimiter mt-10">
-                    <div><span>Open Source</span></div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-md-6 col-lg-4 col-xl-4 mt-5" v-for="item in db.openSource">
-                        <h5>
-                            <img src="css/github.png" class="icon invert-dark">
-                            <span>{{ item.title}}</span>
-                        </h5>
-                        <p v-html="item.short_desc"></p>
-                        <a target="_blank" :href="item.link" class="open-modal">Смотреть на github...</a>
+            <!-- Навыки -->
+            <section id="skills" class="section section-dark">
+                <div class="container">
+                    <h2 class="section-title">Технические навыки</h2>
+
+                    <div class="all-skills-container">
+                        <span class="skill-tag" v-for="tag in getTagsFiltered()" :key="tag.id">
+                            {{ tag.title }}
+                        </span>
                     </div>
                 </div>
-            </div>
-        </div>
-        </div>
+            </section>
 
-        <!-- Modal window -->
-        <div id="animatedModal" :class="{'modal-opened': currentPage, 'modal-closed': !currentPage}">
-            <div class="close-animatedModal" v-if="currentPage">
-                <div class="float-right" @click="setCurrentPage(null)">
-                    <img src="css/cancel.png">
+            <!-- Проекты -->
+            <section id="projects" class="section">
+                <div class="container">
+                    <h2 class="section-title">Лучшие проекты</h2>
+
+                    <div v-for="(project, index) in DATA.bestWorks" :key="project.id">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div>
+                                    <div class="project-title-main">
+                                        <i class="fas fa-project-diagram" style="color: var(--primary);"></i>
+                                        {{ project.title }}
+                                        <a :href=" 'https://' + project.link" target="_blank" class="opensource-link" v-if="project.link">
+                                            {{ project.link }} <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                    </div>
+<!--                                    <div class="project-short-desc">{{ project.short_desc }}</div>-->
+                                </div>
+                                <div class="project-term">{{ project.term }}</div>
+                            </div>
+
+                            <div class="project-body">
+                                <div class="project-desc" v-html="project.desc"></div>
+
+                                <div class="project-skills">
+                                    <span
+                                        class="skill-tag"
+                                        v-for="tagId in project.tags"
+                                        :key="tagId"
+                                    >
+                                        {{ getTagById(tagId) }}
+                                    </span>
+                                </div>
+
+                                <div class="project-integrations" v-if="project.api.length > 0 || project.parsing.length > 0">
+                                    <div class="integrations-title">
+                                        <i class="fas fa-plug"></i>
+                                        Интеграции
+                                    </div>
+                                    <div class="integrations-tags">
+                                        <span class="integration-tag" v-for="api in project.api" :key="api">
+                                            API: {{ api }}
+                                        </span>
+                                        <span class="integration-tag" v-for="parser in project.parsing" :key="parser">
+                                            Парсинг: {{ parser }}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="project-gallery" v-if="project.previews.length">
+                                    <div class="gallery-title">
+                                        <i class="fas fa-images"></i>
+                                        Скриншоты и схемы
+                                    </div>
+                                    <div class="gallery-grid">
+                                        <div class="gallery-item-container" v-for="(img, imgIndex) in project.previews" :key="imgIndex">
+                                            <img :src=" '/previews/' + img" class="gallery-item" @click="openModal(img)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="page-break" v-if="index < DATA.bestWorks.length - 1"></div>
+                    </div>
                 </div>
-                <div @click="setCurrentPage(null)">
-                    <img src="css/left-arrow.png"> Назад
+            </section>
+
+            <!-- Open Source проекты -->
+            <section id="opensource" class="section section-dark">
+                <div class="container">
+                    <h2 class="section-title section-title-secondary">Open Source проекты</h2>
+
+                    <div class="opensource-container">
+                        <div class="opensource-card" v-for="project in DATA.openSource" :key="project.title">
+                            <div class="opensource-header">
+                                <h3 class="opensource-title">
+                                    <i class="fas fa-code-branch opensource-icon"></i>
+                                    {{ project.title }}
+                                </h3>
+                            </div>
+                            <div class="opensource-desc" v-html="project.short_desc"></div>
+                            <div>
+                                <a :href="project.link" target="_blank" class="btn btn-secondary">
+                                    <i class="fab fa-github"></i>
+                                    Посмотреть на GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Контакты -->
+            <section id="contact" class="section">
+                <div class="container">
+                    <h2 class="section-title">Контакты</h2>
+                    <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                        <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary);">
+                            Если вы ищете опытного backend-разработчика для своего проекта или у вас есть интересные предложения о сотрудничестве, свяжитесь со мной.
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem; align-items: center;">
+                            <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+                                <a href="mailto:mail@alex.md" class="btn btn-outline">
+                                    <i class="fas fa-envelope"></i>
+                                    mail@alex.md
+                                </a>
+                                <a href="https://simferopol.hh.ru/resume/b54b1539ff0f98a1dd0039ed1f76674d344651" target="_blank" class="btn btn-outline">
+                                    <i class="fa fa-file"></i>
+                                    Резюме
+                                </a>
+                                <a href="https://github.com/qvp" class="btn btn-outline">
+                                    <i class="fab fa-github"></i>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="container footer-content">
+                <div class="footer-links">
+                    <a href="#about" class="footer-link" @click="scrollTo('about')">Обо мне</a>
+                    <a href="#skills" class="footer-link" @click="scrollTo('skills')">Навыки</a>
+                    <a href="#projects" class="footer-link" @click="scrollTo('projects')">Проекты</a>
+                    <a href="#opensource" class="footer-link" @click="scrollTo('opensource')">Open Source</a>
+                    <a href="#contact" class="footer-link" @click="scrollTo('contact')">Контакты</a>
+                </div>
+                <div class="footer-copyright">
+                    &copy; {{ new Date().getFullYear() }}
                 </div>
             </div>
+        </footer>
+
+        <!-- Кнопка "Наверх" -->
+        <button class="back-to-top" v-if="showBackToTop" @click="scrollToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <!-- Модальное окно для изображений -->
+        <div class="modal" :class="{active: modalActive}" @click.self="closeModal">
             <div class="modal-content">
-                <template v-for="item in db.bestWorks" v-if="item.id === currentPage">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 work-margin-top">
-                                <h5 class="work-title">
-                                    <a target="_blank" :href="item.link" v-html="item.title"></a>
-                                    <span class="work-date" v-if="item.term">(Срок {{ item.term }})</span>
-                                </h5>
-                                <p class="pre-line" v-html="item.desc"></p>
-
-                                <a :href="item.link" class="open-modal" target="_blank" v-if="item.link">{{ item.link }}</a>
-
-                                <h6>Использованные технологии:</h6>
-                                <p>
-                                    <span v-for="tag in getTagsNames(item.tags)" class="badge badge-danger badge-skill">{{ tag }}</span>
-                                </p>
-
-                                <h6 v-if="item.api.length">Интеграция API:</h6>
-                                <p>{{ item.api.join(', ') }}</p>
-
-                                <h6 v-if="item.parsing.length">Парсинг источников:</h6>
-                                <p>{{ item.parsing.join(', ') }}</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-fluid dark-bg" v-if="item.previews.length">
-                        <div class="row">
-                            <div class="col-6 col-preview col-preview-left">
-                                <a v-for="src in getSideImages(item.previews, 'left')" :href="'previews/' + src" target="_blank">
-                                    <img :src="'previews/' + src">
-                                </a>
-                            </div>
-                            <div class="col-6 col-preview">
-                                <a v-for="src in getSideImages(item.previews, 'right')" :href="'previews/' + src" target="_blank">
-                                    <img :src="'previews/' + src">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </template>
+                <button class="modal-close" @click="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <img :src=" '/previews/' + modalImage" alt="" class="modal-image" v-if="modalImage">
             </div>
         </div>
     </div>
 
-    <script src="js/vue.min.js"></script>
-    <script src="js/DATA.js"></script>
-    <script src="js/script.js"></script>
+    <script src="data.js"></script>
+    <script src="lib/app.js"></script>
 </body>
 </html>
