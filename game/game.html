@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изучение технологий</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div id="flappy-container">
+        <div class="header-bg"></div>
+        <div class="header-image"></div>
+        <canvas id="flappy-canvas"></canvas>
+        <div id="score-display">Изучено: 0 технологий</div>
+        
+        <div id="game-start-screen">
+            <div id="wrapper">
+                <div class="game-title">Python<br>Developer</div>
+                <div class="game-subtitle">Специализируюсь на создании высоконагруженных масштабируемых бэкенд-систем с использованием Python, AI
+                    <br>и современных микросервисных архитектур.</div>
+                <button id="start-btn" class="btn btn-primary"><i class="fa-solid fa-explosion"></i> Не нажимать</button>
+                <button id="open-source-btn" class="btn btn-secondary"><i class="fab fa-github"></i> Open Source</button>
+            </div>
+        </div>
+        
+        <div id="game-over-screen">
+            <div class="game-over-title" id="game-over-title">GAME OVER</div>
+            <div id="failed-tech-display" class="failed-tech" style="display: none;">
+                Вы не смогли пройти <span id="failed-tech-name"></span>
+            </div>
+            <div id="learned-techs-display" class="learned-techs">
+                Пройдены: <span id="learned-techs-list"></span>
+            </div>
+            
+            <button class="restart-btn">ПОПРОБОВАТЬ СНОВА</button>
+        </div>
+    </div>
+
+    <script>
+        // Создаем звуковой эффект прыжка
+        function createJumpSound() {
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            return function playJump() {
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.value = 600;
+                oscillator.type = 'sine';
+                
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.2);
+            };
+        }
+    </script>
+    
+    <!-- Подключение плагина -->
+    <script src="game.js"></script>
+</body>
+</html>

@@ -210,6 +210,12 @@ body {
     overflow: hidden;
 }
 
+.header iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 .header-bg {
     position: absolute;
     top: 0;

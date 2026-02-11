@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Александр Python разработчик</title>
     <link rel="icon" type="image/x-icon" href="lib/favicon.ico">
-    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="game/fontawesome/css/all.min.css">
     <script src="lib/vue.global.js"></script>
     <link rel="stylesheet" href="lib/app.css">
 
@@ -44,26 +43,31 @@
             </div>
         </nav>
 
-        <!-- Шапка -->
+        <!-- Шапка обычная -->
+<!--        <header class="header">-->
+<!--            <div class="header-bg"></div>-->
+<!--            <div class="header-image"></div>-->
+<!--            <div class="container">-->
+<!--                <div class="header-content">-->
+<!--                    <h1 class="header-title">Backend разработчик</h1>-->
+<!--                    <p class="header-subtitle">Специализируюсь на создании высоконагруженных и масштабируемых бэкенд-систем с использованием Python, AI и современных микросервисных архитектур.</p>-->
+<!--                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">-->
+<!--                        <button class="btn btn-primary" @click="scrollTo('projects')">-->
+<!--                            <i class="fas fa-briefcase"></i>-->
+<!--                            Смотреть проекты-->
+<!--                        </button>-->
+<!--                        <button class="btn btn-secondary" @click="scrollTo('opensource')">-->
+<!--                            <i class="fab fa-github"></i>-->
+<!--                            Open Source-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </header>-->
+
+        <!-- Шапка с игрой -->
         <header class="header">
-            <div class="header-bg"></div>
-            <div class="header-image"></div>
-            <div class="container">
-                <div class="header-content">
-                    <h1 class="header-title">Backend разработчик</h1>
-                    <p class="header-subtitle">Специализируюсь на создании высоконагруженных и масштабируемых бэкенд-систем с использованием Python, AI и современных микросервисных архитектур.</p>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <button class="btn btn-primary" @click="scrollTo('projects')">
-                            <i class="fas fa-briefcase"></i>
-                            Смотреть проекты
-                        </button>
-                        <button class="btn btn-secondary" @click="scrollTo('opensource')">
-                            <i class="fab fa-github"></i>
-                            Open Source
-                        </button>
-                    </div>
-                </div>
-            </div>
+            <iframe src="game/game.html"></iframe>
         </header>
 
         <!-- Основной контент -->
@@ -105,9 +109,7 @@
                     <h2 class="section-title">Технические навыки</h2>
 
                     <div class="all-skills-container">
-                        <span class="skill-tag" v-for="tag in getTagsFiltered()" :key="tag.id">
-                            <i :class=" 'devicon-' + tag.title.toLowerCase() + '-plain' "></i> {{ tag.title }}
-                        </span>
+                        <span class="skill-tag" v-for="tag in getTagsFiltered()" :key="tag.id">{{ tag.title }}</span>
                     </div>
                 </div>
             </section>
