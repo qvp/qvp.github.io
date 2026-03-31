@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Александр Python разработчик</title>
+
+    <meta property="og:title" content="Александр Python разработчик">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://alex.md/lib/og_preview.jpg">
+    <meta property="og:url" content="https://alex.md">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="lib/favicon.ico">
+    <link rel="stylesheet" href="game/fontawesome/css/all.min.css">
+    <script src="lib/vue.global.js"></script>
+    <link rel="stylesheet" href="lib/app.css">
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+        ym(62635345, 'init', {webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/62635345" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+</head>
+<body>
+    <div id="app">
+        <!-- Навигация -->
+        <nav class="nav">
+            <div class="container nav-content">
+                <a href="#" class="nav-logo">
+                    <i class="fas fa-code"></i>
+                    Портфолио
+                </a>
+                <div class="nav-links">
+                    <a href="#about" class="nav-link" :class="{active: activeSection === 'about'}" @click="scrollTo('about')">Обо мне</a>
+                    <a href="#skills" class="nav-link" :class="{active: activeSection === 'skills'}" @click="scrollTo('skills')">Навыки</a>
+                    <a href="#projects" class="nav-link" :class="{active: activeSection === 'projects'}" @click="scrollTo('projects')">Проекты</a>
+                    <a href="#opensource" class="nav-link" :class="{active: activeSection === 'opensource'}" @click="scrollTo('opensource')">Open Source</a>
+                    <a href="#contact" class="nav-link" :class="{active: activeSection === 'contact'}" @click="scrollTo('contact')">Контакты</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Шапка обычная -->
+<!--        <header class="header">-->
+<!--            <div class="header-bg"></div>-->
+<!--            <div class="header-image"></div>-->
+<!--            <div class="container">-->
+<!--                <div class="header-content">-->
+<!--                    <h1 class="header-title">Backend разработчик</h1>-->
+<!--                    <p class="header-subtitle">Специализируюсь на создании высоконагруженных и масштабируемых бэкенд-систем с использованием Python, AI и современных микросервисных архитектур.</p>-->
+<!--                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">-->
+<!--                        <button class="btn btn-primary" @click="scrollTo('projects')">-->
+<!--                            <i class="fas fa-briefcase"></i>-->
+<!--                            Смотреть проекты-->
+<!--                        </button>-->
+<!--                        <button class="btn btn-secondary" @click="scrollTo('opensource')">-->
+<!--                            <i class="fab fa-github"></i>-->
+<!--                            Open Source-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </header>-->
+
+        <!-- Шапка с игрой -->
+        <header class="header">
+            <iframe src="game/game.html"></iframe>
+        </header>
+
+        <!-- Основной контент -->
+        <main>
+            <!-- Обо мне -->
+            <section id="about" class="section">
+                <div class="container">
+                    <h2 class="section-title">Обо мне</h2>
+                    <div style="max-width: 800px;">
+                        <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
+                            Меня зовут Александр, мне 35 лет. Backend-разработкой занимаюсь 15 лет, из которых более 8 лет я разрабатываю сложные и интересные проекты на Python. Большинство моих работ - это долгосрочные проекты, которые я делал "с нуля".
+                        </p>
+                        <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
+                            Это помогло мне получить разносторонний опыт на всех уровнях: выбирать правильную архитектуру, проектировать базы данных, находить нестандартные решения, разрабатывать собственные библиотеки, доводить проект до "production ready". Особое внимание уделяю качеству кода. Пишу тесты, документацию. Постоянно занимаюсь повышением квалификации.
+                            <br>
+                            В свободное время предпочитаю активный отдых.
+                        </p>
+                        <div style="display: flex; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div style="width: 10px; height: 10px; background-color: var(--success); border-radius: 50%;"></div>
+                                <span>Более 10 крупных проектов</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div style="width: 10px; height: 10px; background-color: var(--warning); border-radius: 50%;"></div>
+                                <span>15+ лет опыта</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div style="width: 10px; height: 10px; background-color: var(--primary); border-radius: 50%;"></div>
+                                <span>Микросервисная архитектура</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Навыки -->
+            <section id="skills" class="section section-dark">
+                <div class="container">
+                    <h2 class="section-title">Технические навыки</h2>
+
+                    <div class="all-skills-container">
+                        <span class="skill-tag" v-for="tag in getTagsFiltered()" :key="tag.id">{{ tag.title }}</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Проекты -->
+            <section id="projects" class="section">
+                <div class="container">
+                    <h2 class="section-title">Лучшие проекты</h2>
+
+                    <div v-for="(project, index) in DATA.bestWorks" :key="project.id">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div>
+                                    <div class="project-title-main">
+                                        <i class="fas fa-project-diagram" style="color: var(--primary);"></i>
+                                        {{ project.title }}
+                                        <a :href=" 'https://' + project.link" target="_blank" class="opensource-link" v-if="project.link">
+                                            {{ project.link }} <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                    </div>
+<!--                                    <div class="project-short-desc">{{ project.short_desc }}</div>-->
+                                </div>
+                                <div class="project-term">{{ project.term }}</div>
+                            </div>
+
+                            <div class="project-body">
+                                <div class="project-desc" v-html="project.desc"></div>
+
+                                <div class="project-skills">
+                                    <span
+                                        class="skill-tag"
+                                        v-for="tagId in project.tags"
+                                        :key="tagId"
+                                    >
+                                        {{ getTagById(tagId) }}
+                                    </span>
+                                </div>
+
+                                <div class="project-integrations" v-if="project.api.length > 0 || project.parsing.length > 0">
+                                    <div class="integrations-title">
+                                        <i class="fas fa-plug"></i>
+                                        Интеграции
+                                    </div>
+                                    <div class="integrations-tags">
+                                        <span class="integration-tag" v-for="api in project.api" :key="api">
+                                            API: {{ api }}
+                                        </span>
+                                        <span class="integration-tag" v-for="parser in project.parsing" :key="parser">
+                                            Парсинг: {{ parser }}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="project-gallery" v-if="project.previews.length">
+                                    <div class="gallery-title">
+                                        <i class="fas fa-images"></i>
+                                        Скриншоты и схемы
+                                    </div>
+                                    <div class="gallery-grid">
+                                        <div class="gallery-item-container" v-for="(img, imgIndex) in project.previews" :key="imgIndex">
+                                            <img :src=" '/previews/' + img" class="gallery-item" @click="openModal(img)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="page-break" v-if="index < DATA.bestWorks.length - 1"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Open Source проекты -->
+            <section id="opensource" class="section section-dark">
+                <div class="container">
+                    <h2 class="section-title section-title-secondary">Open Source проекты</h2>
+
+                    <div class="opensource-container">
+                        <div class="opensource-card" v-for="project in DATA.openSource" :key="project.title">
+                            <div class="opensource-header">
+                                <h3 class="opensource-title">
+                                    <i class="fas fa-code-branch opensource-icon"></i>
+                                    {{ project.title }}
+                                </h3>
+                            </div>
+                            <div class="opensource-desc" v-html="project.short_desc"></div>
+                            <div>
+                                <a :href="project.link" target="_blank" class="btn btn-secondary">
+                                    <i class="fab fa-github"></i>
+                                    Посмотреть на GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Контакты -->
+            <section id="contact" class="section">
+                <div class="container">
+                    <h2 class="section-title">Контакты</h2>
+                    <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                        <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary);">
+                            Если вы ищете опытного backend-разработчика для своего проекта или у вас есть интересные предложения о сотрудничестве, свяжитесь со мной.
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem; align-items: center;">
+                            <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+                                <a href="mailto:mail@alex.md" class="btn btn-outline">
+                                    <i class="fas fa-envelope"></i>
+                                    mail@alex.md
+                                </a>
+                                <a href="https://simferopol.hh.ru/resume/b54b1539ff0f98a1dd0039ed1f76674d344651" target="_blank" class="btn btn-outline">
+                                    <i class="fa fa-file"></i>
+                                    Резюме
+                                </a>
+                                <a href="https://github.com/qvp" class="btn btn-outline">
+                                    <i class="fab fa-github"></i>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="container footer-content">
+                <div class="footer-links">
+                    <a href="#about" class="footer-link" @click="scrollTo('about')">Обо мне</a>
+                    <a href="#skills" class="footer-link" @click="scrollTo('skills')">Навыки</a>
+                    <a href="#projects" class="footer-link" @click="scrollTo('projects')">Проекты</a>
+                    <a href="#opensource" class="footer-link" @click="scrollTo('opensource')">Open Source</a>
+                    <a href="#contact" class="footer-link" @click="scrollTo('contact')">Контакты</a>
+                </div>
+                <div class="footer-copyright">
+                    &copy; {{ new Date().getFullYear() }}
+                </div>
+            </div>
+        </footer>
+
+        <!-- Кнопка "Наверх" -->
+        <button class="back-to-top" v-if="showBackToTop" @click="scrollToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <!-- Модальное окно для изображений -->
+        <div class="modal" :class="{active: modalActive}" @click.self="closeModal">
+            <div class="modal-content">
+                <button class="modal-close" @click="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <img :src=" '/previews/' + modalImage" alt="" class="modal-image" v-if="modalImage">
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="lib/app.js"></script>
+</body>
+</html>
